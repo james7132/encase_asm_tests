@@ -1,0 +1,37 @@
+[package]
+name = "encase_asm_tests"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+encase= { git = "https://github.com/james7132/encase", branch = "main", features = ["mint"] }
+mint = { version = "0.5.9", default-features = false }
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+
+[[example]]
+name = "dynamic_uniform_buffer_write_into_vec"
+crate-type = ["lib"]
+
+[[example]]
+name = "dynamic_uniform_buffer_write_into_slice"
+crate-type = ["lib"]
+
+[[example]]
+name = "storage_buffer_write_into_vec"
+crate-type = ["lib"]
+
+[[example]]
+name = "storage_buffer_write_into_slice"
+crate-type = ["lib"]
+
+[[example]]
+name = "uniform_buffer_write_into_vec"
+crate-type = ["lib"]
+
+[[example]]
+name = "uniform_buffer_write_into_slice"
+crate-type = ["lib"]
+
