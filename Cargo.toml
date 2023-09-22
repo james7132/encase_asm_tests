@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-encase= { git = "https://github.com/james7132/encase", branch = "main", features = ["mint"] }
+encase= { git = "https://github.com/james7132/encase", branch = "experimentation", features = ["mint"] }
 mint = { version = "0.5.9", default-features = false }
 
 [profile.release]

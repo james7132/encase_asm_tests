@@ -11,7 +11,7 @@ checksum = "6051f239ecec86fde3410901ab7860d458d160371533842974fc61f96d15879b"
 [[package]]
 name = "encase"
 version = "0.6.1"
-source = "git+https://github.com/james7132/encase?branch=main#308bb7248f052a16604e8bf77a7118bea05bf9ea"
+source = "git+https://github.com/james7132/encase?branch=experimentation#02f36c50ff3aa67de60ba1b2f1b20f707879345b"
 dependencies = [
  "const_panic",
  "encase_derive",
@@ -30,7 +30,7 @@ dependencies = [
 [[package]]
 name = "encase_derive"
 version = "0.6.1"
-source = "git+https://github.com/james7132/encase?branch=main#308bb7248f052a16604e8bf77a7118bea05bf9ea"
+source = "git+https://github.com/james7132/encase?branch=experimentation#02f36c50ff3aa67de60ba1b2f1b20f707879345b"
 dependencies = [
  "encase_derive_impl",
 ]
@@ -38,7 +38,7 @@ dependencies = [
 [[package]]
 name = "encase_derive_impl"
 version = "0.6.1"
-source = "git+https://github.com/james7132/encase?branch=main#308bb7248f052a16604e8bf77a7118bea05bf9ea"
+source = "git+https://github.com/james7132/encase?branch=experimentation#02f36c50ff3aa67de60ba1b2f1b20f707879345b"
 dependencies = [
  "proc-macro2",
  "quote",
