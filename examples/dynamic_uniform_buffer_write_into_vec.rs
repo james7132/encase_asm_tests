@@ -1,6 +1,6 @@
 use encase::{*, internal::WriteInto};
 
-#[derive(Debug, ShaderType, PartialEq, Clone, Copy)]
+#[derive(ShaderTyp)]
 struct A {
     f: f32,
     u: u32,
