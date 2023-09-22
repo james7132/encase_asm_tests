@@ -1,1527 +1,1157 @@
 	.text
 	.file	"storage_buffer_write_into_slice.70c47a29e9f77f48-cgu.0"
-	.section	".text.encase::impls::mint::<impl encase::core::traits::WriteInto for mint::matrix::ColumnMatrix3<T>>::write_into","ax",@progbits
-	.p2align	4, 0x90
-	.type	encase::impls::mint::<impl encase::core::traits::WriteInto for mint::matrix::ColumnMatrix3<T>>::write_into,@function
-encase::impls::mint::<impl encase::core::traits::WriteInto for mint::matrix::ColumnMatrix3<T>>::write_into:
-	.cfi_startproc
-	pushq	%rax
-	.cfi_def_cfa_offset 16
-	movq	%rdi, %rcx
-	movq	16(%rsi), %rdi
-	leaq	4(%rdi), %rax
-	cmpq	$-5, %rdi
-	ja	.LBB0_27
-	movq	8(%rsi), %rdx
-	movq	8(%rdx), %r8
-	cmpq	%r8, %rax
-	ja	.LBB0_21
-	movl	(%rcx), %r8d
-	movq	(%rdx), %r9
-	movl	%r8d, (%r9,%rdi)
-	movq	%rax, 16(%rsi)
-	leaq	8(%rdi), %r9
-	cmpq	$-5, %rax
-	ja	.LBB0_19
-	movq	8(%rdx), %r8
-	cmpq	%r8, %r9
-	ja	.LBB0_20
-	movl	4(%rcx), %eax
-	movq	(%rdx), %r8
-	movl	%eax, 4(%r8,%rdi)
-	movq	%r9, 16(%rsi)
-	leaq	12(%rdi), %rax
-	cmpq	$-5, %r9
-	ja	.LBB0_26
-	movq	8(%rdx), %r8
-	cmpq	%r8, %rax
-	ja	.LBB0_21
-	movl	8(%rcx), %eax
-	movq	(%rdx), %r8
-	movl	%eax, 8(%r8,%rdi)
-	leaq	16(%rdi), %r8
-	movq	%r8, 16(%rsi)
-	leaq	20(%rdi), %rax
-	cmpq	$-5, %r8
-	ja	.LBB0_23
-	movq	8(%rdx), %r8
-	cmpq	%r8, %rax
-	ja	.LBB0_21
-	movl	12(%rcx), %r8d
-	movq	(%rdx), %r9
-	movl	%r8d, 16(%r9,%rdi)
-	movq	%rax, 16(%rsi)
-	leaq	24(%rdi), %r9
-	cmpq	$-5, %rax
-	ja	.LBB0_19
-	movq	8(%rdx), %r8
-	cmpq	%r8, %r9
-	ja	.LBB0_20
-	movl	16(%rcx), %eax
-	movq	(%rdx), %r8
-	movl	%eax, 20(%r8,%rdi)
-	movq	%r9, 16(%rsi)
-	leaq	28(%rdi), %rax
-	cmpq	$-5, %r9
-	ja	.LBB0_26
-	movq	8(%rdx), %r8
-	cmpq	%r8, %rax
-	ja	.LBB0_21
-	movl	20(%rcx), %eax
-	movq	(%rdx), %r8
-	movl	%eax, 24(%r8,%rdi)
-	leaq	32(%rdi), %r8
-	movq	%r8, 16(%rsi)
-	leaq	36(%rdi), %rax
-	cmpq	$-5, %r8
-	ja	.LBB0_23
-	movq	8(%rdx), %r8
-	cmpq	%r8, %rax
-	ja	.LBB0_21
-	movl	24(%rcx), %r8d
-	movq	(%rdx), %r9
-	movl	%r8d, 32(%r9,%rdi)
-	movq	%rax, 16(%rsi)
-	leaq	40(%rdi), %r9
-	cmpq	$-5, %rax
-	ja	.LBB0_19
-	movq	8(%rdx), %r8
-	cmpq	%r8, %r9
-	ja	.LBB0_20
-	movl	28(%rcx), %eax
-	movq	(%rdx), %r8
-	movl	%eax, 36(%r8,%rdi)
-	movq	%r9, 16(%rsi)
-	leaq	44(%rdi), %rax
-	cmpq	$-5, %r9
-	ja	.LBB0_26
-	movq	8(%rdx), %r8
-	cmpq	%r8, %rax
-	ja	.LBB0_21
-	movl	32(%rcx), %eax
-	movq	(%rdx), %rcx
-	movl	%eax, 40(%rcx,%rdi)
-	addq	$48, %rdi
-	movq	%rdi, 16(%rsi)
-	popq	%rax
-	.cfi_def_cfa_offset 8
-	retq
-.LBB0_19:
-	.cfi_def_cfa_offset 16
-	movq	%rax, %rdi
-	movq	%r9, %rax
-	jmp	.LBB0_27
-.LBB0_20:
-	movq	%r9, %rax
-.LBB0_21:
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	movq	%rax, %rdi
-	movq	%r8, %rsi
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB0_26:
-	movq	%r9, %rdi
-	jmp	.LBB0_27
-.LBB0_23:
-	movq	%r8, %rdi
-.LBB0_27:
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	movq	%rax, %rsi
-	callq	*core::slice::index::slice_index_order_fail@GOTPCREL(%rip)
-	ud2
-.Lfunc_end0:
-	.size	encase::impls::mint::<impl encase::core::traits::WriteInto for mint::matrix::ColumnMatrix3<T>>::write_into, .Lfunc_end0-encase::impls::mint::<impl encase::core::traits::WriteInto for mint::matrix::ColumnMatrix3<T>>::write_into
-	.cfi_endproc
-
-	.section	".text.encase::impls::mint::<impl encase::core::traits::WriteInto for mint::matrix::ColumnMatrix4<T>>::write_into","ax",@progbits
-	.p2align	4, 0x90
-	.type	encase::impls::mint::<impl encase::core::traits::WriteInto for mint::matrix::ColumnMatrix4<T>>::write_into,@function
-encase::impls::mint::<impl encase::core::traits::WriteInto for mint::matrix::ColumnMatrix4<T>>::write_into:
-	.cfi_startproc
-	pushq	%rax
-	.cfi_def_cfa_offset 16
-	movq	16(%rsi), %rdx
-	leaq	4(%rdx), %rax
-	cmpq	$-5, %rdx
-	ja	.LBB1_34
-	movq	8(%rsi), %r8
-	movq	8(%r8), %rcx
-	cmpq	%rcx, %rax
-	ja	.LBB1_51
-	movl	(%rdi), %ecx
-	movq	(%r8), %r9
-	movl	%ecx, (%r9,%rdx)
-	movq	%rax, 16(%rsi)
-	leaq	8(%rdx), %r9
-	cmpq	$-5, %rax
-	ja	.LBB1_33
-	movq	8(%r8), %rcx
-	cmpq	%rcx, %r9
-	ja	.LBB1_35
-	movl	4(%rdi), %eax
-	movq	(%r8), %rcx
-	movl	%eax, 4(%rcx,%rdx)
-	movq	%r9, 16(%rsi)
-	leaq	12(%rdx), %rax
-	cmpq	$-5, %r9
-	ja	.LBB1_36
-	movq	8(%r8), %rcx
-	cmpq	%rcx, %rax
-	ja	.LBB1_51
-	movl	8(%rdi), %ecx
-	movq	(%r8), %r9
-	movl	%ecx, 8(%r9,%rdx)
-	movq	%rax, 16(%rsi)
-	leaq	16(%rdx), %r9
-	cmpq	$-5, %rax
-	ja	.LBB1_33
-	movq	8(%r8), %rcx
-	cmpq	%rcx, %r9
-	ja	.LBB1_35
-	movl	12(%rdi), %eax
-	movq	(%r8), %rcx
-	movl	%eax, 12(%rcx,%rdx)
-	movq	%r9, 16(%rsi)
-	leaq	20(%rdx), %rax
-	cmpq	$-5, %r9
-	ja	.LBB1_36
-	movq	8(%r8), %rcx
-	cmpq	%rcx, %rax
-	ja	.LBB1_51
-	movl	16(%rdi), %ecx
-	movq	(%r8), %r9
-	movl	%ecx, 16(%r9,%rdx)
-	movq	%rax, 16(%rsi)
-	leaq	24(%rdx), %r9
-	cmpq	$-5, %rax
-	ja	.LBB1_33
-	movq	8(%r8), %rcx
-	cmpq	%rcx, %r9
-	ja	.LBB1_35
-	movl	20(%rdi), %eax
-	movq	(%r8), %rcx
-	movl	%eax, 20(%rcx,%rdx)
-	movq	%r9, 16(%rsi)
-	leaq	28(%rdx), %rax
-	cmpq	$-5, %r9
-	ja	.LBB1_36
-	movq	8(%r8), %rcx
-	cmpq	%rcx, %rax
-	ja	.LBB1_51
-	movl	24(%rdi), %ecx
-	movq	(%r8), %r9
-	movl	%ecx, 24(%r9,%rdx)
-	movq	%rax, 16(%rsi)
-	leaq	32(%rdx), %r9
-	cmpq	$-5, %rax
-	ja	.LBB1_33
-	movq	8(%r8), %rcx
-	cmpq	%rcx, %r9
-	ja	.LBB1_35
-	movl	28(%rdi), %eax
-	movq	(%r8), %rcx
-	movl	%eax, 28(%rcx,%rdx)
-	movq	%r9, 16(%rsi)
-	leaq	36(%rdx), %rax
-	cmpq	$-5, %r9
-	ja	.LBB1_36
-	movq	8(%r8), %rcx
-	cmpq	%rcx, %rax
-	ja	.LBB1_51
-	movl	32(%rdi), %ecx
-	movq	(%r8), %r9
-	movl	%ecx, 32(%r9,%rdx)
-	movq	%rax, 16(%rsi)
-	leaq	40(%rdx), %r9
-	cmpq	$-5, %rax
-	ja	.LBB1_33
-	movq	8(%r8), %rcx
-	cmpq	%rcx, %r9
-	ja	.LBB1_35
-	movl	36(%rdi), %eax
-	movq	(%r8), %rcx
-	movl	%eax, 36(%rcx,%rdx)
-	movq	%r9, 16(%rsi)
-	leaq	44(%rdx), %rax
-	cmpq	$-5, %r9
-	ja	.LBB1_36
-	movq	8(%r8), %rcx
-	cmpq	%rcx, %rax
-	ja	.LBB1_51
-	movl	40(%rdi), %ecx
-	movq	(%r8), %r9
-	movl	%ecx, 40(%r9,%rdx)
-	movq	%rax, 16(%rsi)
-	leaq	48(%rdx), %r9
-	cmpq	$-5, %rax
-	ja	.LBB1_33
-	movq	8(%r8), %rcx
-	cmpq	%rcx, %r9
-	ja	.LBB1_35
-	movl	44(%rdi), %eax
-	movq	(%r8), %rcx
-	movl	%eax, 44(%rcx,%rdx)
-	movq	%r9, 16(%rsi)
-	leaq	52(%rdx), %rax
-	cmpq	$-5, %r9
-	ja	.LBB1_36
-	movq	8(%r8), %rcx
-	cmpq	%rcx, %rax
-	ja	.LBB1_51
-	movl	48(%rdi), %ecx
-	movq	(%r8), %r9
-	movl	%ecx, 48(%r9,%rdx)
-	movq	%rax, 16(%rsi)
-	leaq	56(%rdx), %r9
-	cmpq	$-5, %rax
-	ja	.LBB1_33
-	movq	8(%r8), %rcx
-	cmpq	%rcx, %r9
-	ja	.LBB1_35
-	movl	52(%rdi), %eax
-	movq	(%r8), %rcx
-	movl	%eax, 52(%rcx,%rdx)
-	movq	%r9, 16(%rsi)
-	leaq	60(%rdx), %rax
-	cmpq	$-5, %r9
-	ja	.LBB1_36
-	movq	8(%r8), %rcx
-	cmpq	%rcx, %rax
-	ja	.LBB1_51
-	movl	56(%rdi), %ecx
-	movq	(%r8), %r9
-	movl	%ecx, 56(%r9,%rdx)
-	movq	%rax, 16(%rsi)
-	addq	$64, %rdx
-	cmpq	$-5, %rax
-	ja	.LBB1_49
-	movq	8(%r8), %rcx
-	cmpq	%rcx, %rdx
-	ja	.LBB1_50
-	movl	60(%rdi), %ecx
-	movq	(%r8), %rdi
-	movl	%ecx, (%rdi,%rax)
-	movq	%rdx, 16(%rsi)
-	popq	%rax
-	.cfi_def_cfa_offset 8
-	retq
-.LBB1_33:
-	.cfi_def_cfa_offset 16
-	movq	%rax, %rdi
-	movq	%r9, %rax
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	movq	%rax, %rsi
-	callq	*core::slice::index::slice_index_order_fail@GOTPCREL(%rip)
-	ud2
-.LBB1_35:
-	movq	%r9, %rax
-.LBB1_51:
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	movq	%rax, %rdi
-	movq	%rcx, %rsi
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB1_36:
-	movq	%r9, %rdi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	movq	%rax, %rsi
-	callq	*core::slice::index::slice_index_order_fail@GOTPCREL(%rip)
-	ud2
-.LBB1_34:
-	movq	%rdx, %rdi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	movq	%rax, %rsi
-	callq	*core::slice::index::slice_index_order_fail@GOTPCREL(%rip)
-	ud2
-.LBB1_49:
-	movq	%rax, %rdi
-	movq	%rdx, %rax
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	movq	%rax, %rsi
-	callq	*core::slice::index::slice_index_order_fail@GOTPCREL(%rip)
-	ud2
-.LBB1_50:
-	movq	%rdx, %rax
-	jmp	.LBB1_51
-.Lfunc_end1:
-	.size	encase::impls::mint::<impl encase::core::traits::WriteInto for mint::matrix::ColumnMatrix4<T>>::write_into, .Lfunc_end1-encase::impls::mint::<impl encase::core::traits::WriteInto for mint::matrix::ColumnMatrix4<T>>::write_into
-	.cfi_endproc
-
 	.section	.text.storage_buffer_write_into_slice,"ax",@progbits
 	.globl	storage_buffer_write_into_slice
 	.p2align	4, 0x90
 	.type	storage_buffer_write_into_slice,@function
 storage_buffer_write_into_slice:
 	.cfi_startproc
-	pushq	%r14
-	.cfi_def_cfa_offset 16
-	pushq	%rbx
-	.cfi_def_cfa_offset 24
-	subq	$40, %rsp
-	.cfi_def_cfa_offset 64
-	.cfi_offset %rbx, -24
-	.cfi_offset %r14, -16
-	movq	%rsi, (%rsp)
-	movq	%rdx, 8(%rsp)
 	cmpq	$2512, %rdx
-	jb	.LBB2_153
-	movq	%rdi, %rbx
-	movl	$0, 16(%rsp)
-	movq	%rsp, %rax
-	movq	%rax, 24(%rsp)
+	jb	.LBB0_2
 	movl	2200(%rdi), %eax
 	movl	%eax, (%rsi)
-	movq	$4, 32(%rsp)
-	movq	8(%rsp), %rsi
-	cmpq	$7, %rsi
-	jbe	.LBB2_192
-	movss	2204(%rbx), %xmm0
-	movq	(%rsp), %rax
-	movss	%xmm0, 4(%rax)
-	movq	8(%rsp), %rsi
-	cmpq	$11, %rsi
-	jbe	.LBB2_193
-	movss	2208(%rbx), %xmm0
-	movq	(%rsp), %rax
-	movss	%xmm0, 8(%rax)
-	movq	8(%rsp), %rsi
-	cmpq	$15, %rsi
-	jbe	.LBB2_194
-	movl	2212(%rbx), %eax
-	movq	(%rsp), %rcx
-	movl	%eax, 12(%rcx)
-	movq	8(%rsp), %rsi
-	cmpq	$19, %rsi
-	jbe	.LBB2_195
-	movl	2216(%rbx), %eax
-	movq	(%rsp), %rcx
-	movl	%eax, 16(%rcx)
-	movq	8(%rsp), %rsi
-	cmpq	$23, %rsi
-	jbe	.LBB2_196
-	movss	2220(%rbx), %xmm0
-	movq	(%rsp), %rax
-	movss	%xmm0, 20(%rax)
-	movq	$24, 32(%rsp)
-	movq	8(%rsp), %rsi
-	cmpq	$27, %rsi
-	jbe	.LBB2_197
-	movss	2224(%rbx), %xmm0
-	movq	(%rsp), %rax
-	movss	%xmm0, 24(%rax)
-	movq	8(%rsp), %rsi
-	cmpq	$35, %rsi
-	jbe	.LBB2_198
-	movl	2144(%rbx), %ecx
-	movq	(%rsp), %rax
-	movl	%ecx, 32(%rax)
-	movq	8(%rsp), %rsi
-	cmpq	$40, %rsi
-	jb	.LBB2_199
-	movl	2148(%rbx), %ecx
-	movl	%ecx, 36(%rax)
-	movq	8(%rsp), %rsi
-	cmpq	$51, %rsi
-	jbe	.LBB2_200
-	movl	2228(%rbx), %ecx
-	movq	(%rsp), %rax
-	movl	%ecx, 48(%rax)
-	movq	8(%rsp), %rsi
-	cmpq	$56, %rsi
-	jb	.LBB2_201
-	movl	2232(%rbx), %ecx
-	movl	%ecx, 52(%rax)
-	movq	8(%rsp), %rsi
-	cmpq	$60, %rsi
-	jb	.LBB2_202
-	movl	2236(%rbx), %ecx
-	movl	%ecx, 56(%rax)
-	movq	8(%rsp), %rsi
-	cmpq	$67, %rsi
-	jbe	.LBB2_203
-	movl	2016(%rbx), %ecx
-	movq	(%rsp), %rax
-	movl	%ecx, 64(%rax)
-	movq	8(%rsp), %rsi
-	cmpq	$72, %rsi
-	jb	.LBB2_204
-	movl	2020(%rbx), %ecx
-	movl	%ecx, 68(%rax)
-	movq	8(%rsp), %rsi
-	cmpq	$76, %rsi
-	jb	.LBB2_205
-	movl	2024(%rbx), %ecx
-	movl	%ecx, 72(%rax)
-	movq	8(%rsp), %rsi
-	cmpq	$80, %rsi
-	jb	.LBB2_206
-	movl	2028(%rbx), %ecx
-	movl	%ecx, 76(%rax)
-	movq	8(%rsp), %rsi
-	cmpq	$83, %rsi
-	jbe	.LBB2_207
-	movl	2032(%rbx), %ecx
-	movq	(%rsp), %rax
-	movl	%ecx, 80(%rax)
-	movq	8(%rsp), %rsi
-	cmpq	$88, %rsi
-	jb	.LBB2_208
-	movl	2036(%rbx), %ecx
-	movl	%ecx, 84(%rax)
-	movq	8(%rsp), %rsi
-	cmpq	$92, %rsi
-	jb	.LBB2_209
-	movl	2040(%rbx), %ecx
-	movl	%ecx, 88(%rax)
-	movq	8(%rsp), %rsi
-	cmpq	$96, %rsi
-	jb	.LBB2_210
-	movl	2044(%rbx), %ecx
-	movl	%ecx, 92(%rax)
-	movq	$96, 32(%rsp)
-	movq	8(%rsp), %rsi
-	cmpq	$99, %rsi
-	jbe	.LBB2_211
-	movl	2152(%rbx), %ecx
-	movq	(%rsp), %rax
-	movl	%ecx, 96(%rax)
-	movq	8(%rsp), %rsi
-	cmpq	$104, %rsi
-	jb	.LBB2_212
-	movl	2156(%rbx), %ecx
-	movl	%ecx, 100(%rax)
-	movq	8(%rsp), %rsi
-	cmpq	$108, %rsi
-	jb	.LBB2_213
-	movl	2160(%rbx), %ecx
-	movl	%ecx, 104(%rax)
-	movq	8(%rsp), %rsi
-	cmpq	$112, %rsi
-	jb	.LBB2_214
-	movl	2164(%rbx), %ecx
-	movl	%ecx, 108(%rax)
-	movq	8(%rsp), %rsi
-	cmpq	$116, %rsi
-	jb	.LBB2_215
-	movl	2168(%rbx), %ecx
-	movl	%ecx, 112(%rax)
-	movq	8(%rsp), %rsi
-	cmpq	$120, %rsi
-	jb	.LBB2_216
-	movl	2172(%rbx), %ecx
-	movl	%ecx, 116(%rax)
-	movq	8(%rsp), %rsi
-	cmpq	$123, %rsi
-	jbe	.LBB2_217
-	movl	1664(%rbx), %ecx
-	movq	(%rsp), %rax
-	movl	%ecx, 120(%rax)
-	movq	8(%rsp), %rsi
-	cmpq	$128, %rsi
-	jb	.LBB2_218
-	movl	1668(%rbx), %ecx
-	movl	%ecx, 124(%rax)
-	movq	8(%rsp), %rsi
-	cmpq	$132, %rsi
-	jb	.LBB2_219
-	movl	1672(%rbx), %ecx
-	movl	%ecx, 128(%rax)
-	movq	8(%rsp), %rsi
-	cmpq	$136, %rsi
-	jb	.LBB2_220
-	movl	1676(%rbx), %ecx
-	movl	%ecx, 132(%rax)
-	movq	8(%rsp), %rsi
-	cmpq	$140, %rsi
-	jb	.LBB2_221
-	movl	1680(%rbx), %ecx
-	movl	%ecx, 136(%rax)
-	movq	8(%rsp), %rsi
-	cmpq	$144, %rsi
-	jb	.LBB2_222
-	movl	1684(%rbx), %ecx
-	movl	%ecx, 140(%rax)
-	movq	8(%rsp), %rsi
-	cmpq	$148, %rsi
-	jb	.LBB2_223
-	movl	1688(%rbx), %ecx
-	movl	%ecx, 144(%rax)
-	movq	8(%rsp), %rsi
-	cmpq	$152, %rsi
-	jb	.LBB2_224
-	movl	1692(%rbx), %ecx
-	movl	%ecx, 148(%rax)
-	movq	8(%rsp), %rsi
-	cmpq	$163, %rsi
-	jbe	.LBB2_225
-	movl	2176(%rbx), %ecx
-	movq	(%rsp), %rax
-	movl	%ecx, 160(%rax)
-	movq	8(%rsp), %rsi
-	cmpq	$168, %rsi
-	jb	.LBB2_226
-	movl	2180(%rbx), %ecx
-	movl	%ecx, 164(%rax)
-	movq	8(%rsp), %rsi
-	cmpq	$172, %rsi
-	jb	.LBB2_227
-	movl	2184(%rbx), %ecx
-	movl	%ecx, 168(%rax)
-	movq	8(%rsp), %rsi
-	cmpq	$180, %rsi
-	jb	.LBB2_228
-	movl	2188(%rbx), %ecx
-	movl	%ecx, 176(%rax)
-	movq	8(%rsp), %rsi
-	cmpq	$184, %rsi
-	jb	.LBB2_229
-	movl	2192(%rbx), %ecx
-	movl	%ecx, 180(%rax)
-	movq	8(%rsp), %rsi
-	cmpq	$188, %rsi
-	jb	.LBB2_230
-	movl	2196(%rbx), %ecx
-	movl	%ecx, 184(%rax)
-	movq	$192, 32(%rsp)
-	leaq	2240(%rbx), %rdi
-	leaq	16(%rsp), %rsi
-	callq	encase::impls::mint::<impl encase::core::traits::WriteInto for mint::matrix::ColumnMatrix3<T>>::write_into
-	movq	32(%rsp), %rcx
-	leaq	4(%rcx), %rax
-	cmpq	$-5, %rcx
-	ja	.LBB2_238
-	movq	24(%rsp), %rdx
-	movq	8(%rdx), %rsi
-	cmpq	%rsi, %rax
-	ja	.LBB2_156
-	movl	2048(%rbx), %esi
-	movq	(%rdx), %rdi
-	movl	%esi, (%rdi,%rcx)
-	leaq	8(%rcx), %rdi
-	cmpq	$-5, %rax
-	ja	.LBB2_189
-	leaq	8(%rdx), %r9
-	movq	(%r9), %rsi
-	cmpq	%rsi, %rdi
-	ja	.LBB2_190
-	movl	2052(%rbx), %eax
-	movq	(%rdx), %rsi
-	movl	%eax, 4(%rsi,%rcx)
-	leaq	12(%rcx), %rax
-	cmpq	$-5, %rdi
-	ja	.LBB2_237
-	movq	(%r9), %rsi
-	cmpq	%rsi, %rax
-	ja	.LBB2_156
-	movl	2056(%rbx), %eax
-	movq	(%rdx), %rsi
-	movl	%eax, 8(%rsi,%rcx)
-	leaq	16(%rcx), %rsi
-	leaq	20(%rcx), %rax
-	cmpq	$-5, %rsi
-	ja	.LBB2_232
-	movq	(%r9), %rsi
-	cmpq	%rsi, %rax
-	ja	.LBB2_156
-	movl	2060(%rbx), %esi
-	movq	(%rdx), %rdi
-	movl	%esi, 16(%rdi,%rcx)
-	leaq	24(%rcx), %rdi
-	cmpq	$-5, %rax
-	ja	.LBB2_189
-	movq	(%r9), %rsi
-	cmpq	%rsi, %rdi
-	ja	.LBB2_190
-	movl	2064(%rbx), %eax
-	movq	(%rdx), %rsi
-	movl	%eax, 20(%rsi,%rcx)
-	leaq	28(%rcx), %rax
-	cmpq	$-5, %rdi
-	ja	.LBB2_237
-	movq	(%r9), %rsi
-	cmpq	%rsi, %rax
-	ja	.LBB2_156
-	movl	2068(%rbx), %eax
-	movq	(%rdx), %rsi
-	movl	%eax, 24(%rsi,%rcx)
-	leaq	32(%rcx), %rsi
-	leaq	36(%rcx), %rax
-	cmpq	$-5, %rsi
-	ja	.LBB2_232
-	movq	(%r9), %rsi
-	cmpq	%rsi, %rax
-	ja	.LBB2_156
-	movl	2072(%rbx), %esi
-	movq	(%rdx), %rdi
-	movl	%esi, 32(%rdi,%rcx)
-	leaq	40(%rcx), %rdi
-	cmpq	$-5, %rax
-	ja	.LBB2_189
-	movq	(%r9), %rsi
-	cmpq	%rsi, %rdi
-	ja	.LBB2_190
-	movl	2076(%rbx), %eax
-	movq	(%rdx), %rsi
-	movl	%eax, 36(%rsi,%rcx)
-	leaq	44(%rcx), %rax
-	cmpq	$-5, %rdi
-	ja	.LBB2_237
-	movq	(%r9), %rsi
-	cmpq	%rsi, %rax
-	ja	.LBB2_156
-	movl	2080(%rbx), %eax
-	movq	(%rdx), %rsi
-	movl	%eax, 40(%rsi,%rcx)
-	leaq	48(%rcx), %rsi
-	leaq	52(%rcx), %rax
-	cmpq	$-5, %rsi
-	ja	.LBB2_232
-	movq	(%r9), %rsi
-	cmpq	%rsi, %rax
-	ja	.LBB2_156
-	movl	2084(%rbx), %esi
-	movq	(%rdx), %rdi
-	movl	%esi, 48(%rdi,%rcx)
-	leaq	56(%rcx), %rdi
-	cmpq	$-5, %rax
-	ja	.LBB2_189
-	movq	(%r9), %rsi
-	cmpq	%rsi, %rdi
-	ja	.LBB2_190
-	movl	2088(%rbx), %eax
-	movq	(%rdx), %rsi
-	movl	%eax, 52(%rsi,%rcx)
-	leaq	60(%rcx), %rax
-	cmpq	$-5, %rdi
-	ja	.LBB2_237
-	movq	(%r9), %rsi
-	cmpq	%rsi, %rax
-	ja	.LBB2_156
-	movl	2092(%rbx), %eax
-	movq	(%rdx), %rsi
-	movl	%eax, 56(%rsi,%rcx)
-	leaq	64(%rcx), %rdi
-	movq	%rdi, 32(%rsp)
-	leaq	68(%rcx), %rax
-	cmpq	$-5, %rdi
-	ja	.LBB2_181
-	movq	8(%rdx), %rsi
-	cmpq	%rsi, %rax
-	ja	.LBB2_156
-	movl	1696(%rbx), %esi
-	movq	(%rdx), %rdi
-	movl	%esi, 64(%rdi,%rcx)
-	leaq	72(%rcx), %r8
-	cmpq	$-5, %rax
-	ja	.LBB2_191
-	movq	(%r9), %rsi
-	cmpq	%rsi, %r8
-	ja	.LBB2_239
-	movl	1700(%rbx), %eax
-	movq	(%rdx), %rsi
-	movl	%eax, 68(%rsi,%rcx)
-	leaq	76(%rcx), %rax
-	cmpq	$-5, %r8
-	ja	.LBB2_240
-	movq	(%r9), %rsi
-	cmpq	%rsi, %rax
-	ja	.LBB2_156
-	movl	1704(%rbx), %esi
-	movq	(%rdx), %rdi
-	movl	%esi, 72(%rdi,%rcx)
-	leaq	80(%rcx), %r8
-	cmpq	$-5, %rax
-	ja	.LBB2_191
-	movq	(%r9), %rsi
-	cmpq	%rsi, %r8
-	ja	.LBB2_239
-	movl	1708(%rbx), %eax
-	movq	(%rdx), %rsi
-	movl	%eax, 76(%rsi,%rcx)
-	leaq	84(%rcx), %rax
-	cmpq	$-5, %r8
-	ja	.LBB2_240
-	movq	(%r9), %rsi
-	cmpq	%rsi, %rax
-	ja	.LBB2_156
-	movl	1712(%rbx), %esi
-	movq	(%rdx), %rdi
-	movl	%esi, 80(%rdi,%rcx)
-	leaq	88(%rcx), %r8
-	cmpq	$-5, %rax
-	ja	.LBB2_191
-	movq	(%r9), %rsi
-	cmpq	%rsi, %r8
-	ja	.LBB2_239
-	movl	1716(%rbx), %eax
-	movq	(%rdx), %rsi
-	movl	%eax, 84(%rsi,%rcx)
-	leaq	92(%rcx), %rax
-	cmpq	$-5, %r8
-	ja	.LBB2_240
-	movq	(%r9), %rsi
-	cmpq	%rsi, %rax
-	ja	.LBB2_156
-	movl	1720(%rbx), %esi
-	movq	(%rdx), %rdi
-	movl	%esi, 88(%rdi,%rcx)
-	leaq	96(%rcx), %r8
-	cmpq	$-5, %rax
-	ja	.LBB2_191
-	movq	(%r9), %rsi
-	cmpq	%rsi, %r8
-	ja	.LBB2_239
-	movl	1724(%rbx), %eax
-	movq	(%rdx), %rsi
-	movl	%eax, 92(%rsi,%rcx)
-	leaq	100(%rcx), %rdi
-	cmpq	$-5, %r8
-	ja	.LBB2_187
-	movq	8(%rdx), %rsi
-	cmpq	%rsi, %rdi
-	ja	.LBB2_176
-	movl	2096(%rbx), %eax
-	movq	(%rdx), %rsi
-	movl	%eax, 96(%rsi,%rcx)
-	leaq	104(%rcx), %rax
-	cmpq	$-5, %rdi
-	ja	.LBB2_185
-	movq	(%r9), %rsi
-	cmpq	%rsi, %rax
-	ja	.LBB2_247
-	movl	2100(%rbx), %esi
-	movq	(%rdx), %rdi
-	movl	%esi, 100(%rdi,%rcx)
-	leaq	108(%rcx), %rdi
-	cmpq	$-5, %rax
-	ja	.LBB2_186
-	movq	(%r9), %rsi
-	cmpq	%rsi, %rdi
-	ja	.LBB2_176
-	movl	2104(%rbx), %eax
-	movq	(%rdx), %rsi
-	movl	%eax, 104(%rsi,%rcx)
-	leaq	112(%rcx), %rax
-	cmpq	$-5, %rdi
-	ja	.LBB2_185
-	movq	(%r9), %rsi
-	cmpq	%rsi, %rax
-	ja	.LBB2_247
-	movl	2108(%rbx), %esi
-	movq	(%rdx), %rdi
-	movl	%esi, 108(%rdi,%rcx)
-	leaq	116(%rcx), %rdi
-	cmpq	$-5, %rax
-	ja	.LBB2_186
-	movq	(%r9), %rsi
-	cmpq	%rsi, %rdi
-	ja	.LBB2_176
-	movl	2112(%rbx), %eax
-	movq	(%rdx), %rsi
-	movl	%eax, 112(%rsi,%rcx)
-	leaq	120(%rcx), %rax
-	cmpq	$-5, %rdi
-	ja	.LBB2_185
-	movq	(%r9), %rsi
-	cmpq	%rsi, %rax
-	ja	.LBB2_247
-	movl	2116(%rbx), %esi
-	movq	(%rdx), %rdi
-	movl	%esi, 116(%rdi,%rcx)
-	leaq	124(%rcx), %rdi
-	cmpq	$-5, %rax
-	ja	.LBB2_186
-	movq	(%r9), %rsi
-	cmpq	%rsi, %rdi
-	ja	.LBB2_176
-	movl	2120(%rbx), %eax
-	movq	(%rdx), %rsi
-	movl	%eax, 120(%rsi,%rcx)
-	leaq	128(%rcx), %rax
-	cmpq	$-5, %rdi
-	ja	.LBB2_185
-	movq	(%r9), %rsi
-	cmpq	%rsi, %rax
-	ja	.LBB2_247
-	movl	2124(%rbx), %esi
-	movq	(%rdx), %rdi
-	movl	%esi, 124(%rdi,%rcx)
-	leaq	132(%rcx), %rdi
-	cmpq	$-5, %rax
-	ja	.LBB2_186
-	movq	(%r9), %rsi
-	cmpq	%rsi, %rdi
-	ja	.LBB2_176
-	movl	2128(%rbx), %eax
-	movq	(%rdx), %rsi
-	movl	%eax, 128(%rsi,%rcx)
-	leaq	136(%rcx), %rax
-	cmpq	$-5, %rdi
-	ja	.LBB2_185
-	movq	(%r9), %rsi
-	cmpq	%rsi, %rax
-	ja	.LBB2_247
-	movl	2132(%rbx), %esi
-	movq	(%rdx), %rdi
-	movl	%esi, 132(%rdi,%rcx)
-	leaq	140(%rcx), %rdi
-	cmpq	$-5, %rax
-	ja	.LBB2_186
-	movq	(%r9), %rsi
-	cmpq	%rsi, %rdi
-	ja	.LBB2_176
-	movl	2136(%rbx), %eax
-	movq	(%rdx), %rsi
-	movl	%eax, 136(%rsi,%rcx)
-	addq	$144, %rcx
-	cmpq	$-5, %rdi
-	ja	.LBB2_252
-	movq	(%r9), %rsi
-	cmpq	%rsi, %rcx
-	ja	.LBB2_253
-	movl	2140(%rbx), %eax
-	movq	(%rdx), %rdx
-	movl	%eax, (%rdx,%rdi)
-	movq	%rcx, 32(%rsp)
-	leaq	1408(%rbx), %rdi
-	leaq	16(%rsp), %rsi
-	callq	encase::impls::mint::<impl encase::core::traits::WriteInto for mint::matrix::ColumnMatrix4<T>>::write_into
-	leaq	768(%rbx), %rcx
-	movq	24(%rsp), %rdx
-	movq	32(%rsp), %rax
-	movl	$32, %r8d
-	.p2align	4, 0x90
-.LBB2_105:
-	cmpq	$-5, %rax
-	ja	.LBB2_154
-	movq	8(%rdx), %rsi
-	leaq	4(%rax), %rdi
-	cmpq	%rsi, %rdi
-	ja	.LBB2_155
-	movl	(%rcx), %esi
-	movq	(%rdx), %r9
-	movl	%esi, (%r9,%rax)
-	addq	$4, %rcx
-	movq	%rdi, %rax
-	decq	%r8
-	jne	.LBB2_105
-	leaq	896(%rbx), %rcx
-	movl	$32, %r8d
-	.p2align	4, 0x90
-.LBB2_109:
-	cmpq	$-5, %rdi
-	ja	.LBB2_160
-	movq	8(%rdx), %rsi
-	leaq	4(%rdi), %rax
-	cmpq	%rsi, %rax
-	ja	.LBB2_161
-	movl	(%rcx), %esi
-	movq	(%rdx), %r9
-	movl	%esi, (%r9,%rdi)
-	addq	$4, %rcx
-	movq	%rax, %rdi
-	decq	%r8
-	jne	.LBB2_109
-	movl	$256, %edi
-	.p2align	4, 0x90
-.LBB2_113:
-	cmpq	$-5, %rax
-	ja	.LBB2_154
-	movq	8(%rdx), %rsi
-	leaq	4(%rax), %rcx
-	cmpq	%rsi, %rcx
-	ja	.LBB2_155
-	movl	(%rbx,%rdi,4), %esi
-	movq	(%rdx), %r8
-	movl	%esi, (%r8,%rax)
-	incq	%rdi
-	movq	%rcx, %rax
-	cmpq	$288, %rdi
-	jne	.LBB2_113
-	movl	$144, %eax
-	.p2align	4, 0x90
-.LBB2_117:
-	cmpq	$-5, %rcx
-	ja	.LBB2_162
-	movq	8(%rdx), %rsi
-	leaq	4(%rcx), %rdi
-	cmpq	%rsi, %rdi
-	ja	.LBB2_163
-	movl	(%rbx,%rax,8), %esi
-	movq	(%rdx), %r8
-	movl	%esi, (%r8,%rcx)
-	cmpq	$-5, %rdi
-	ja	.LBB2_164
-	leaq	8(%rcx), %rdi
-	movq	8(%rdx), %rsi
-	cmpq	%rsi, %rdi
-	ja	.LBB2_159
-	movl	4(%rbx,%rax,8), %esi
-	movq	(%rdx), %r8
-	movl	%esi, 4(%r8,%rcx)
-	incq	%rax
-	movq	%rdi, %rcx
-	cmpq	$160, %rax
-	jne	.LBB2_117
-	movl	$1472, %r8d
-	.p2align	4, 0x90
-.LBB2_123:
-	cmpq	$-5, %rdi
-	ja	.LBB2_157
-	movq	8(%rdx), %rsi
-	leaq	4(%rdi), %rax
-	cmpq	%rsi, %rax
-	ja	.LBB2_161
-	movl	(%rbx,%r8), %ecx
-	movq	(%rdx), %rsi
-	movl	%ecx, (%rsi,%rdi)
-	cmpq	$-5, %rax
-	ja	.LBB2_158
-	leaq	8(%rdi), %rax
-	movq	8(%rdx), %rsi
-	cmpq	%rsi, %rax
-	ja	.LBB2_167
-	movl	4(%rbx,%r8), %ecx
-	movq	(%rdx), %rsi
-	movl	%ecx, 4(%rsi,%rdi)
-	leaq	12(%rdi), %rcx
-	cmpq	$-5, %rax
-	ja	.LBB2_173
-	movq	8(%rdx), %rsi
-	cmpq	%rsi, %rcx
-	ja	.LBB2_168
-	movl	8(%rbx,%r8), %eax
-	movq	(%rdx), %rcx
-	movl	%eax, 8(%rcx,%rdi)
-	addq	$16, %rdi
-	addq	$12, %r8
-	cmpq	$1664, %r8
-	jne	.LBB2_123
-	movl	$512, %r8d
-	.p2align	4, 0x90
-.LBB2_131:
-	cmpq	$-5, %rdi
-	ja	.LBB2_157
-	movq	8(%rdx), %rsi
-	leaq	4(%rdi), %rax
-	cmpq	%rsi, %rax
-	ja	.LBB2_161
-	movl	(%rbx,%r8), %ecx
-	movq	(%rdx), %rsi
-	movl	%ecx, (%rsi,%rdi)
-	cmpq	$-5, %rax
-	ja	.LBB2_158
-	leaq	8(%rdi), %rax
-	movq	8(%rdx), %rsi
-	cmpq	%rsi, %rax
-	ja	.LBB2_167
-	movl	4(%rbx,%r8), %ecx
-	movq	(%rdx), %rsi
-	movl	%ecx, 4(%rsi,%rdi)
-	cmpq	$-5, %rax
-	ja	.LBB2_171
-	leaq	12(%rdi), %rax
-	movq	8(%rdx), %rsi
-	cmpq	%rsi, %rax
-	ja	.LBB2_168
-	movl	8(%rbx,%r8), %ecx
-	movq	(%rdx), %rsi
-	movl	%ecx, 8(%rsi,%rdi)
-	leaq	16(%rdi), %rcx
-	cmpq	$-5, %rax
-	ja	.LBB2_173
-	movq	8(%rdx), %rsi
-	cmpq	%rsi, %rcx
-	ja	.LBB2_175
-	movl	12(%rbx,%r8), %eax
-	movq	(%rdx), %rsi
-	movl	%eax, 12(%rsi,%rdi)
-	addq	$16, %r8
-	movq	%rcx, %rdi
-	cmpq	$768, %r8
-	jne	.LBB2_131
-	movl	$1280, %r8d
-	.p2align	4, 0x90
-.LBB2_141:
-	cmpq	$-5, %rcx
-	ja	.LBB2_177
-	movq	8(%rdx), %rsi
-	leaq	4(%rcx), %rdi
-	cmpq	%rsi, %rdi
-	ja	.LBB2_163
-	movl	(%rbx,%r8), %eax
-	movq	(%rdx), %rsi
-	movl	%eax, (%rsi,%rcx)
-	cmpq	$-5, %rdi
-	ja	.LBB2_179
-	leaq	8(%rcx), %rdi
-	movq	8(%rdx), %rsi
-	cmpq	%rsi, %rdi
-	ja	.LBB2_159
-	movl	4(%rbx,%r8), %eax
-	movq	(%rdx), %rsi
-	movl	%eax, 4(%rsi,%rcx)
-	cmpq	$-5, %rdi
-	ja	.LBB2_180
-	leaq	12(%rcx), %rdi
-	movq	8(%rdx), %rsi
-	cmpq	%rsi, %rdi
-	ja	.LBB2_182
-	movl	8(%rbx,%r8), %eax
-	movq	(%rdx), %rsi
-	movl	%eax, 8(%rsi,%rcx)
-	leaq	16(%rcx), %rax
-	cmpq	$-5, %rdi
-	ja	.LBB2_181
-	movq	8(%rdx), %rsi
-	cmpq	%rsi, %rax
-	ja	.LBB2_183
-	movl	12(%rbx,%r8), %esi
-	movq	(%rdx), %rdi
-	movl	%esi, 12(%rdi,%rcx)
-	addq	$16, %r8
-	movq	%rax, %rcx
-	cmpq	$1408, %r8
-	jne	.LBB2_141
-	movq	%rax, 32(%rsp)
-	leaq	1728(%rbx), %rdi
-	leaq	16(%rsp), %r14
-	movq	%r14, %rsi
-	callq	encase::impls::mint::<impl encase::core::traits::WriteInto for mint::matrix::ColumnMatrix3<T>>::write_into
-	leaq	1764(%rbx), %rdi
-	movq	%r14, %rsi
-	callq	encase::impls::mint::<impl encase::core::traits::WriteInto for mint::matrix::ColumnMatrix3<T>>::write_into
-	leaq	1800(%rbx), %rdi
-	movq	%r14, %rsi
-	callq	encase::impls::mint::<impl encase::core::traits::WriteInto for mint::matrix::ColumnMatrix3<T>>::write_into
-	leaq	1836(%rbx), %rdi
-	movq	%r14, %rsi
-	callq	encase::impls::mint::<impl encase::core::traits::WriteInto for mint::matrix::ColumnMatrix3<T>>::write_into
-	leaq	1872(%rbx), %rdi
-	movq	%r14, %rsi
-	callq	encase::impls::mint::<impl encase::core::traits::WriteInto for mint::matrix::ColumnMatrix3<T>>::write_into
-	leaq	1908(%rbx), %rdi
-	movq	%r14, %rsi
-	callq	encase::impls::mint::<impl encase::core::traits::WriteInto for mint::matrix::ColumnMatrix3<T>>::write_into
-	leaq	1944(%rbx), %rdi
-	movq	%r14, %rsi
-	callq	encase::impls::mint::<impl encase::core::traits::WriteInto for mint::matrix::ColumnMatrix3<T>>::write_into
-	leaq	1980(%rbx), %rdi
-	movq	%r14, %rsi
-	callq	encase::impls::mint::<impl encase::core::traits::WriteInto for mint::matrix::ColumnMatrix3<T>>::write_into
-	movq	%rbx, %rdi
-	movq	%r14, %rsi
-	callq	encase::impls::mint::<impl encase::core::traits::WriteInto for mint::matrix::ColumnMatrix4<T>>::write_into
-	leaq	64(%rbx), %rdi
-	movq	%r14, %rsi
-	callq	encase::impls::mint::<impl encase::core::traits::WriteInto for mint::matrix::ColumnMatrix4<T>>::write_into
-	leaq	128(%rbx), %rdi
-	movq	%r14, %rsi
-	callq	encase::impls::mint::<impl encase::core::traits::WriteInto for mint::matrix::ColumnMatrix4<T>>::write_into
-	leaq	192(%rbx), %rdi
-	movq	%r14, %rsi
-	callq	encase::impls::mint::<impl encase::core::traits::WriteInto for mint::matrix::ColumnMatrix4<T>>::write_into
-	leaq	256(%rbx), %rdi
-	movq	%r14, %rsi
-	callq	encase::impls::mint::<impl encase::core::traits::WriteInto for mint::matrix::ColumnMatrix4<T>>::write_into
-	leaq	320(%rbx), %rdi
-	movq	%r14, %rsi
-	callq	encase::impls::mint::<impl encase::core::traits::WriteInto for mint::matrix::ColumnMatrix4<T>>::write_into
-	leaq	384(%rbx), %rdi
-	movq	%r14, %rsi
-	callq	encase::impls::mint::<impl encase::core::traits::WriteInto for mint::matrix::ColumnMatrix4<T>>::write_into
-	leaq	448(%rbx), %rdi
-	movq	%r14, %rsi
-	callq	encase::impls::mint::<impl encase::core::traits::WriteInto for mint::matrix::ColumnMatrix4<T>>::write_into
-	movq	32(%rsp), %rdi
-	leaq	4(%rdi), %rax
-	cmpq	$-5, %rdi
-	ja	.LBB2_181
-	movq	24(%rsp), %rcx
-	movq	8(%rcx), %rsi
-	cmpq	%rsi, %rax
-	ja	.LBB2_156
-	movss	2276(%rbx), %xmm0
-	movq	(%rcx), %rax
-	movss	%xmm0, (%rax,%rdi)
-.LBB2_153:
-	addq	$40, %rsp
-	.cfi_def_cfa_offset 24
-	popq	%rbx
-	.cfi_def_cfa_offset 16
-	popq	%r14
-	.cfi_def_cfa_offset 8
+	movl	2204(%rdi), %eax
+	movl	%eax, 4(%rsi)
+	movl	2208(%rdi), %eax
+	movl	%eax, 8(%rsi)
+	movl	2212(%rdi), %eax
+	movl	%eax, 12(%rsi)
+	movl	2216(%rdi), %eax
+	movl	%eax, 16(%rsi)
+	movl	2220(%rdi), %eax
+	movl	%eax, 20(%rsi)
+	movl	2224(%rdi), %eax
+	movl	%eax, 24(%rsi)
+	movl	2144(%rdi), %eax
+	movl	%eax, 32(%rsi)
+	movl	2148(%rdi), %eax
+	movl	%eax, 36(%rsi)
+	movl	2228(%rdi), %eax
+	movl	%eax, 48(%rsi)
+	movl	2232(%rdi), %eax
+	movl	%eax, 52(%rsi)
+	movl	2236(%rdi), %eax
+	movl	%eax, 56(%rsi)
+	movl	2016(%rdi), %eax
+	movl	%eax, 64(%rsi)
+	movl	2020(%rdi), %eax
+	movl	%eax, 68(%rsi)
+	movl	2024(%rdi), %eax
+	movl	%eax, 72(%rsi)
+	movl	2028(%rdi), %eax
+	movl	%eax, 76(%rsi)
+	movl	2032(%rdi), %eax
+	movl	%eax, 80(%rsi)
+	movl	2036(%rdi), %eax
+	movl	%eax, 84(%rsi)
+	movl	2040(%rdi), %eax
+	movl	%eax, 88(%rsi)
+	movl	2044(%rdi), %eax
+	movl	%eax, 92(%rsi)
+	movl	2152(%rdi), %eax
+	movl	%eax, 96(%rsi)
+	movl	2156(%rdi), %eax
+	movl	%eax, 100(%rsi)
+	movl	2160(%rdi), %eax
+	movl	%eax, 104(%rsi)
+	movl	2164(%rdi), %eax
+	movl	%eax, 108(%rsi)
+	movl	2168(%rdi), %eax
+	movl	%eax, 112(%rsi)
+	movl	2172(%rdi), %eax
+	movl	%eax, 116(%rsi)
+	movl	1664(%rdi), %eax
+	movl	%eax, 120(%rsi)
+	movl	1668(%rdi), %eax
+	movl	%eax, 124(%rsi)
+	movl	1672(%rdi), %eax
+	movl	%eax, 128(%rsi)
+	movl	1676(%rdi), %eax
+	movl	%eax, 132(%rsi)
+	movl	1680(%rdi), %eax
+	movl	%eax, 136(%rsi)
+	movl	1684(%rdi), %eax
+	movl	%eax, 140(%rsi)
+	movl	1688(%rdi), %eax
+	movl	%eax, 144(%rsi)
+	movl	1692(%rdi), %eax
+	movl	%eax, 148(%rsi)
+	movl	2176(%rdi), %eax
+	movl	%eax, 160(%rsi)
+	movl	2180(%rdi), %eax
+	movl	%eax, 164(%rsi)
+	movl	2184(%rdi), %eax
+	movl	%eax, 168(%rsi)
+	movl	2188(%rdi), %eax
+	movl	%eax, 176(%rsi)
+	movl	2192(%rdi), %eax
+	movl	%eax, 180(%rsi)
+	movl	2196(%rdi), %eax
+	movl	%eax, 184(%rsi)
+	movl	2240(%rdi), %eax
+	movl	%eax, 192(%rsi)
+	movl	2244(%rdi), %eax
+	movl	%eax, 196(%rsi)
+	movl	2248(%rdi), %eax
+	movl	%eax, 200(%rsi)
+	movl	2252(%rdi), %eax
+	movl	%eax, 208(%rsi)
+	movl	2256(%rdi), %eax
+	movl	%eax, 212(%rsi)
+	movl	2260(%rdi), %eax
+	movl	%eax, 216(%rsi)
+	movl	2264(%rdi), %eax
+	movl	%eax, 224(%rsi)
+	movl	2268(%rdi), %eax
+	movl	%eax, 228(%rsi)
+	movl	2272(%rdi), %eax
+	movl	%eax, 232(%rsi)
+	movl	2048(%rdi), %eax
+	movl	%eax, 240(%rsi)
+	movl	2052(%rdi), %eax
+	movl	%eax, 244(%rsi)
+	movl	2056(%rdi), %eax
+	movl	%eax, 248(%rsi)
+	movl	2060(%rdi), %eax
+	movl	%eax, 256(%rsi)
+	movl	2064(%rdi), %eax
+	movl	%eax, 260(%rsi)
+	movl	2068(%rdi), %eax
+	movl	%eax, 264(%rsi)
+	movl	2072(%rdi), %eax
+	movl	%eax, 272(%rsi)
+	movl	2076(%rdi), %eax
+	movl	%eax, 276(%rsi)
+	movl	2080(%rdi), %eax
+	movl	%eax, 280(%rsi)
+	movl	2084(%rdi), %eax
+	movl	%eax, 288(%rsi)
+	movl	2088(%rdi), %eax
+	movl	%eax, 292(%rsi)
+	movl	2092(%rdi), %eax
+	movl	%eax, 296(%rsi)
+	movl	1696(%rdi), %eax
+	movl	%eax, 304(%rsi)
+	movl	1700(%rdi), %eax
+	movl	%eax, 308(%rsi)
+	movl	1704(%rdi), %eax
+	movl	%eax, 312(%rsi)
+	movl	1708(%rdi), %eax
+	movl	%eax, 316(%rsi)
+	movl	1712(%rdi), %eax
+	movl	%eax, 320(%rsi)
+	movl	1716(%rdi), %eax
+	movl	%eax, 324(%rsi)
+	movl	1720(%rdi), %eax
+	movl	%eax, 328(%rsi)
+	movl	1724(%rdi), %eax
+	movl	%eax, 332(%rsi)
+	movl	2096(%rdi), %eax
+	movl	%eax, 336(%rsi)
+	movl	2100(%rdi), %eax
+	movl	%eax, 340(%rsi)
+	movl	2104(%rdi), %eax
+	movl	%eax, 344(%rsi)
+	movl	2108(%rdi), %eax
+	movl	%eax, 348(%rsi)
+	movl	2112(%rdi), %eax
+	movl	%eax, 352(%rsi)
+	movl	2116(%rdi), %eax
+	movl	%eax, 356(%rsi)
+	movl	2120(%rdi), %eax
+	movl	%eax, 360(%rsi)
+	movl	2124(%rdi), %eax
+	movl	%eax, 364(%rsi)
+	movl	2128(%rdi), %eax
+	movl	%eax, 368(%rsi)
+	movl	2132(%rdi), %eax
+	movl	%eax, 372(%rsi)
+	movl	2136(%rdi), %eax
+	movl	%eax, 376(%rsi)
+	movl	2140(%rdi), %eax
+	movl	%eax, 380(%rsi)
+	movl	1408(%rdi), %eax
+	movl	%eax, 384(%rsi)
+	movl	1412(%rdi), %eax
+	movl	%eax, 388(%rsi)
+	movl	1416(%rdi), %eax
+	movl	%eax, 392(%rsi)
+	movl	1420(%rdi), %eax
+	movl	%eax, 396(%rsi)
+	movl	1424(%rdi), %eax
+	movl	%eax, 400(%rsi)
+	movl	1428(%rdi), %eax
+	movl	%eax, 404(%rsi)
+	movl	1432(%rdi), %eax
+	movl	%eax, 408(%rsi)
+	movl	1436(%rdi), %eax
+	movl	%eax, 412(%rsi)
+	movl	1440(%rdi), %eax
+	movl	%eax, 416(%rsi)
+	movl	1444(%rdi), %eax
+	movl	%eax, 420(%rsi)
+	movl	1448(%rdi), %eax
+	movl	%eax, 424(%rsi)
+	movl	1452(%rdi), %eax
+	movl	%eax, 428(%rsi)
+	movl	1456(%rdi), %eax
+	movl	%eax, 432(%rsi)
+	movl	1460(%rdi), %eax
+	movl	%eax, 436(%rsi)
+	movl	1464(%rdi), %eax
+	movl	%eax, 440(%rsi)
+	movl	1468(%rdi), %eax
+	movl	%eax, 444(%rsi)
+	movl	768(%rdi), %eax
+	movl	%eax, 448(%rsi)
+	movl	772(%rdi), %eax
+	movl	%eax, 452(%rsi)
+	movl	776(%rdi), %eax
+	movl	%eax, 456(%rsi)
+	movl	780(%rdi), %eax
+	movl	%eax, 460(%rsi)
+	movl	784(%rdi), %eax
+	movl	%eax, 464(%rsi)
+	movl	788(%rdi), %eax
+	movl	%eax, 468(%rsi)
+	movl	792(%rdi), %eax
+	movl	%eax, 472(%rsi)
+	movl	796(%rdi), %eax
+	movl	%eax, 476(%rsi)
+	movl	800(%rdi), %eax
+	movl	%eax, 480(%rsi)
+	movl	804(%rdi), %eax
+	movl	%eax, 484(%rsi)
+	movl	808(%rdi), %eax
+	movl	%eax, 488(%rsi)
+	movl	812(%rdi), %eax
+	movl	%eax, 492(%rsi)
+	movl	816(%rdi), %eax
+	movl	%eax, 496(%rsi)
+	movl	820(%rdi), %eax
+	movl	%eax, 500(%rsi)
+	movl	824(%rdi), %eax
+	movl	%eax, 504(%rsi)
+	movl	828(%rdi), %eax
+	movl	%eax, 508(%rsi)
+	movl	832(%rdi), %eax
+	movl	%eax, 512(%rsi)
+	movl	836(%rdi), %eax
+	movl	%eax, 516(%rsi)
+	movl	840(%rdi), %eax
+	movl	%eax, 520(%rsi)
+	movl	844(%rdi), %eax
+	movl	%eax, 524(%rsi)
+	movl	848(%rdi), %eax
+	movl	%eax, 528(%rsi)
+	movl	852(%rdi), %eax
+	movl	%eax, 532(%rsi)
+	movl	856(%rdi), %eax
+	movl	%eax, 536(%rsi)
+	movl	860(%rdi), %eax
+	movl	%eax, 540(%rsi)
+	movl	864(%rdi), %eax
+	movl	%eax, 544(%rsi)
+	movl	868(%rdi), %eax
+	movl	%eax, 548(%rsi)
+	movl	872(%rdi), %eax
+	movl	%eax, 552(%rsi)
+	movl	876(%rdi), %eax
+	movl	%eax, 556(%rsi)
+	movl	880(%rdi), %eax
+	movl	%eax, 560(%rsi)
+	movl	884(%rdi), %eax
+	movl	%eax, 564(%rsi)
+	movl	888(%rdi), %eax
+	movl	%eax, 568(%rsi)
+	movl	892(%rdi), %eax
+	movl	%eax, 572(%rsi)
+	movl	896(%rdi), %eax
+	movl	%eax, 576(%rsi)
+	movl	900(%rdi), %eax
+	movl	%eax, 580(%rsi)
+	movl	904(%rdi), %eax
+	movl	%eax, 584(%rsi)
+	movl	908(%rdi), %eax
+	movl	%eax, 588(%rsi)
+	movl	912(%rdi), %eax
+	movl	%eax, 592(%rsi)
+	movl	916(%rdi), %eax
+	movl	%eax, 596(%rsi)
+	movl	920(%rdi), %eax
+	movl	%eax, 600(%rsi)
+	movl	924(%rdi), %eax
+	movl	%eax, 604(%rsi)
+	movl	928(%rdi), %eax
+	movl	%eax, 608(%rsi)
+	movl	932(%rdi), %eax
+	movl	%eax, 612(%rsi)
+	movl	936(%rdi), %eax
+	movl	%eax, 616(%rsi)
+	movl	940(%rdi), %eax
+	movl	%eax, 620(%rsi)
+	movl	944(%rdi), %eax
+	movl	%eax, 624(%rsi)
+	movl	948(%rdi), %eax
+	movl	%eax, 628(%rsi)
+	movl	952(%rdi), %eax
+	movl	%eax, 632(%rsi)
+	movl	956(%rdi), %eax
+	movl	%eax, 636(%rsi)
+	movl	960(%rdi), %eax
+	movl	%eax, 640(%rsi)
+	movl	964(%rdi), %eax
+	movl	%eax, 644(%rsi)
+	movl	968(%rdi), %eax
+	movl	%eax, 648(%rsi)
+	movl	972(%rdi), %eax
+	movl	%eax, 652(%rsi)
+	movl	976(%rdi), %eax
+	movl	%eax, 656(%rsi)
+	movl	980(%rdi), %eax
+	movl	%eax, 660(%rsi)
+	movl	984(%rdi), %eax
+	movl	%eax, 664(%rsi)
+	movl	988(%rdi), %eax
+	movl	%eax, 668(%rsi)
+	movl	992(%rdi), %eax
+	movl	%eax, 672(%rsi)
+	movl	996(%rdi), %eax
+	movl	%eax, 676(%rsi)
+	movl	1000(%rdi), %eax
+	movl	%eax, 680(%rsi)
+	movl	1004(%rdi), %eax
+	movl	%eax, 684(%rsi)
+	movl	1008(%rdi), %eax
+	movl	%eax, 688(%rsi)
+	movl	1012(%rdi), %eax
+	movl	%eax, 692(%rsi)
+	movl	1016(%rdi), %eax
+	movl	%eax, 696(%rsi)
+	movl	1020(%rdi), %eax
+	movl	%eax, 700(%rsi)
+	movl	1024(%rdi), %eax
+	movl	%eax, 704(%rsi)
+	movl	1028(%rdi), %eax
+	movl	%eax, 708(%rsi)
+	movl	1032(%rdi), %eax
+	movl	%eax, 712(%rsi)
+	movl	1036(%rdi), %eax
+	movl	%eax, 716(%rsi)
+	movl	1040(%rdi), %eax
+	movl	%eax, 720(%rsi)
+	movl	1044(%rdi), %eax
+	movl	%eax, 724(%rsi)
+	movl	1048(%rdi), %eax
+	movl	%eax, 728(%rsi)
+	movl	1052(%rdi), %eax
+	movl	%eax, 732(%rsi)
+	movl	1056(%rdi), %eax
+	movl	%eax, 736(%rsi)
+	movl	1060(%rdi), %eax
+	movl	%eax, 740(%rsi)
+	movl	1064(%rdi), %eax
+	movl	%eax, 744(%rsi)
+	movl	1068(%rdi), %eax
+	movl	%eax, 748(%rsi)
+	movl	1072(%rdi), %eax
+	movl	%eax, 752(%rsi)
+	movl	1076(%rdi), %eax
+	movl	%eax, 756(%rsi)
+	movl	1080(%rdi), %eax
+	movl	%eax, 760(%rsi)
+	movl	1084(%rdi), %eax
+	movl	%eax, 764(%rsi)
+	movl	1088(%rdi), %eax
+	movl	%eax, 768(%rsi)
+	movl	1092(%rdi), %eax
+	movl	%eax, 772(%rsi)
+	movl	1096(%rdi), %eax
+	movl	%eax, 776(%rsi)
+	movl	1100(%rdi), %eax
+	movl	%eax, 780(%rsi)
+	movl	1104(%rdi), %eax
+	movl	%eax, 784(%rsi)
+	movl	1108(%rdi), %eax
+	movl	%eax, 788(%rsi)
+	movl	1112(%rdi), %eax
+	movl	%eax, 792(%rsi)
+	movl	1116(%rdi), %eax
+	movl	%eax, 796(%rsi)
+	movl	1120(%rdi), %eax
+	movl	%eax, 800(%rsi)
+	movl	1124(%rdi), %eax
+	movl	%eax, 804(%rsi)
+	movl	1128(%rdi), %eax
+	movl	%eax, 808(%rsi)
+	movl	1132(%rdi), %eax
+	movl	%eax, 812(%rsi)
+	movl	1136(%rdi), %eax
+	movl	%eax, 816(%rsi)
+	movl	1140(%rdi), %eax
+	movl	%eax, 820(%rsi)
+	movl	1144(%rdi), %eax
+	movl	%eax, 824(%rsi)
+	movl	1148(%rdi), %eax
+	movl	%eax, 828(%rsi)
+	movl	1152(%rdi), %eax
+	movl	%eax, 832(%rsi)
+	movl	1156(%rdi), %eax
+	movl	%eax, 836(%rsi)
+	movl	1160(%rdi), %eax
+	movl	%eax, 840(%rsi)
+	movl	1164(%rdi), %eax
+	movl	%eax, 844(%rsi)
+	movl	1168(%rdi), %eax
+	movl	%eax, 848(%rsi)
+	movl	1172(%rdi), %eax
+	movl	%eax, 852(%rsi)
+	movl	1176(%rdi), %eax
+	movl	%eax, 856(%rsi)
+	movl	1180(%rdi), %eax
+	movl	%eax, 860(%rsi)
+	movl	1184(%rdi), %eax
+	movl	%eax, 864(%rsi)
+	movl	1188(%rdi), %eax
+	movl	%eax, 868(%rsi)
+	movl	1192(%rdi), %eax
+	movl	%eax, 872(%rsi)
+	movl	1196(%rdi), %eax
+	movl	%eax, 876(%rsi)
+	movl	1200(%rdi), %eax
+	movl	%eax, 880(%rsi)
+	movl	1204(%rdi), %eax
+	movl	%eax, 884(%rsi)
+	movl	1208(%rdi), %eax
+	movl	%eax, 888(%rsi)
+	movl	1212(%rdi), %eax
+	movl	%eax, 892(%rsi)
+	movl	1216(%rdi), %eax
+	movl	%eax, 896(%rsi)
+	movl	1220(%rdi), %eax
+	movl	%eax, 900(%rsi)
+	movl	1224(%rdi), %eax
+	movl	%eax, 904(%rsi)
+	movl	1228(%rdi), %eax
+	movl	%eax, 908(%rsi)
+	movl	1232(%rdi), %eax
+	movl	%eax, 912(%rsi)
+	movl	1236(%rdi), %eax
+	movl	%eax, 916(%rsi)
+	movl	1240(%rdi), %eax
+	movl	%eax, 920(%rsi)
+	movl	1244(%rdi), %eax
+	movl	%eax, 924(%rsi)
+	movl	1248(%rdi), %eax
+	movl	%eax, 928(%rsi)
+	movl	1252(%rdi), %eax
+	movl	%eax, 932(%rsi)
+	movl	1256(%rdi), %eax
+	movl	%eax, 936(%rsi)
+	movl	1260(%rdi), %eax
+	movl	%eax, 940(%rsi)
+	movl	1264(%rdi), %eax
+	movl	%eax, 944(%rsi)
+	movl	1268(%rdi), %eax
+	movl	%eax, 948(%rsi)
+	movl	1272(%rdi), %eax
+	movl	%eax, 952(%rsi)
+	movl	1276(%rdi), %eax
+	movl	%eax, 956(%rsi)
+	movl	1472(%rdi), %eax
+	movl	%eax, 960(%rsi)
+	movl	1476(%rdi), %eax
+	movl	%eax, 964(%rsi)
+	movl	1480(%rdi), %eax
+	movl	%eax, 968(%rsi)
+	movl	1484(%rdi), %eax
+	movl	%eax, 976(%rsi)
+	movl	1488(%rdi), %eax
+	movl	%eax, 980(%rsi)
+	movl	1492(%rdi), %eax
+	movl	%eax, 984(%rsi)
+	movl	1496(%rdi), %eax
+	movl	%eax, 992(%rsi)
+	movl	1500(%rdi), %eax
+	movl	%eax, 996(%rsi)
+	movl	1504(%rdi), %eax
+	movl	%eax, 1000(%rsi)
+	movl	1508(%rdi), %eax
+	movl	%eax, 1008(%rsi)
+	movl	1512(%rdi), %eax
+	movl	%eax, 1012(%rsi)
+	movl	1516(%rdi), %eax
+	movl	%eax, 1016(%rsi)
+	movl	1520(%rdi), %eax
+	movl	%eax, 1024(%rsi)
+	movl	1524(%rdi), %eax
+	movl	%eax, 1028(%rsi)
+	movl	1528(%rdi), %eax
+	movl	%eax, 1032(%rsi)
+	movl	1532(%rdi), %eax
+	movl	%eax, 1040(%rsi)
+	movl	1536(%rdi), %eax
+	movl	%eax, 1044(%rsi)
+	movl	1540(%rdi), %eax
+	movl	%eax, 1048(%rsi)
+	movl	1544(%rdi), %eax
+	movl	%eax, 1056(%rsi)
+	movl	1548(%rdi), %eax
+	movl	%eax, 1060(%rsi)
+	movl	1552(%rdi), %eax
+	movl	%eax, 1064(%rsi)
+	movl	1556(%rdi), %eax
+	movl	%eax, 1072(%rsi)
+	movl	1560(%rdi), %eax
+	movl	%eax, 1076(%rsi)
+	movl	1564(%rdi), %eax
+	movl	%eax, 1080(%rsi)
+	movl	1568(%rdi), %eax
+	movl	%eax, 1088(%rsi)
+	movl	1572(%rdi), %eax
+	movl	%eax, 1092(%rsi)
+	movl	1576(%rdi), %eax
+	movl	%eax, 1096(%rsi)
+	movl	1580(%rdi), %eax
+	movl	%eax, 1104(%rsi)
+	movl	1584(%rdi), %eax
+	movl	%eax, 1108(%rsi)
+	movl	1588(%rdi), %eax
+	movl	%eax, 1112(%rsi)
+	movl	1592(%rdi), %eax
+	movl	%eax, 1120(%rsi)
+	movl	1596(%rdi), %eax
+	movl	%eax, 1124(%rsi)
+	movl	1600(%rdi), %eax
+	movl	%eax, 1128(%rsi)
+	movl	1604(%rdi), %eax
+	movl	%eax, 1136(%rsi)
+	movl	1608(%rdi), %eax
+	movl	%eax, 1140(%rsi)
+	movl	1612(%rdi), %eax
+	movl	%eax, 1144(%rsi)
+	movl	1616(%rdi), %eax
+	movl	%eax, 1152(%rsi)
+	movl	1620(%rdi), %eax
+	movl	%eax, 1156(%rsi)
+	movl	1624(%rdi), %eax
+	movl	%eax, 1160(%rsi)
+	movl	1628(%rdi), %eax
+	movl	%eax, 1168(%rsi)
+	movl	1632(%rdi), %eax
+	movl	%eax, 1172(%rsi)
+	movl	1636(%rdi), %eax
+	movl	%eax, 1176(%rsi)
+	movl	1640(%rdi), %eax
+	movl	%eax, 1184(%rsi)
+	movl	1644(%rdi), %eax
+	movl	%eax, 1188(%rsi)
+	movl	1648(%rdi), %eax
+	movl	%eax, 1192(%rsi)
+	movl	1652(%rdi), %eax
+	movl	%eax, 1200(%rsi)
+	movl	1656(%rdi), %eax
+	movl	%eax, 1204(%rsi)
+	movl	1660(%rdi), %eax
+	movl	%eax, 1208(%rsi)
+	movl	512(%rdi), %eax
+	movl	%eax, 1216(%rsi)
+	movl	516(%rdi), %eax
+	movl	%eax, 1220(%rsi)
+	movl	520(%rdi), %eax
+	movl	%eax, 1224(%rsi)
+	movl	524(%rdi), %eax
+	movl	%eax, 1228(%rsi)
+	movl	528(%rdi), %eax
+	movl	%eax, 1232(%rsi)
+	movl	532(%rdi), %eax
+	movl	%eax, 1236(%rsi)
+	movl	536(%rdi), %eax
+	movl	%eax, 1240(%rsi)
+	movl	540(%rdi), %eax
+	movl	%eax, 1244(%rsi)
+	movl	544(%rdi), %eax
+	movl	%eax, 1248(%rsi)
+	movl	548(%rdi), %eax
+	movl	%eax, 1252(%rsi)
+	movl	552(%rdi), %eax
+	movl	%eax, 1256(%rsi)
+	movl	556(%rdi), %eax
+	movl	%eax, 1260(%rsi)
+	movl	560(%rdi), %eax
+	movl	%eax, 1264(%rsi)
+	movl	564(%rdi), %eax
+	movl	%eax, 1268(%rsi)
+	movl	568(%rdi), %eax
+	movl	%eax, 1272(%rsi)
+	movl	572(%rdi), %eax
+	movl	%eax, 1276(%rsi)
+	movl	576(%rdi), %eax
+	movl	%eax, 1280(%rsi)
+	movl	580(%rdi), %eax
+	movl	%eax, 1284(%rsi)
+	movl	584(%rdi), %eax
+	movl	%eax, 1288(%rsi)
+	movl	588(%rdi), %eax
+	movl	%eax, 1292(%rsi)
+	movl	592(%rdi), %eax
+	movl	%eax, 1296(%rsi)
+	movl	596(%rdi), %eax
+	movl	%eax, 1300(%rsi)
+	movl	600(%rdi), %eax
+	movl	%eax, 1304(%rsi)
+	movl	604(%rdi), %eax
+	movl	%eax, 1308(%rsi)
+	movl	608(%rdi), %eax
+	movl	%eax, 1312(%rsi)
+	movl	612(%rdi), %eax
+	movl	%eax, 1316(%rsi)
+	movl	616(%rdi), %eax
+	movl	%eax, 1320(%rsi)
+	movl	620(%rdi), %eax
+	movl	%eax, 1324(%rsi)
+	movl	624(%rdi), %eax
+	movl	%eax, 1328(%rsi)
+	movl	628(%rdi), %eax
+	movl	%eax, 1332(%rsi)
+	movl	632(%rdi), %eax
+	movl	%eax, 1336(%rsi)
+	movl	636(%rdi), %eax
+	movl	%eax, 1340(%rsi)
+	movl	640(%rdi), %eax
+	movl	%eax, 1344(%rsi)
+	movl	644(%rdi), %eax
+	movl	%eax, 1348(%rsi)
+	movl	648(%rdi), %eax
+	movl	%eax, 1352(%rsi)
+	movl	652(%rdi), %eax
+	movl	%eax, 1356(%rsi)
+	movl	656(%rdi), %eax
+	movl	%eax, 1360(%rsi)
+	movl	660(%rdi), %eax
+	movl	%eax, 1364(%rsi)
+	movl	664(%rdi), %eax
+	movl	%eax, 1368(%rsi)
+	movl	668(%rdi), %eax
+	movl	%eax, 1372(%rsi)
+	movl	672(%rdi), %eax
+	movl	%eax, 1376(%rsi)
+	movl	676(%rdi), %eax
+	movl	%eax, 1380(%rsi)
+	movl	680(%rdi), %eax
+	movl	%eax, 1384(%rsi)
+	movl	684(%rdi), %eax
+	movl	%eax, 1388(%rsi)
+	movl	688(%rdi), %eax
+	movl	%eax, 1392(%rsi)
+	movl	692(%rdi), %eax
+	movl	%eax, 1396(%rsi)
+	movl	696(%rdi), %eax
+	movl	%eax, 1400(%rsi)
+	movl	700(%rdi), %eax
+	movl	%eax, 1404(%rsi)
+	movl	704(%rdi), %eax
+	movl	%eax, 1408(%rsi)
+	movl	708(%rdi), %eax
+	movl	%eax, 1412(%rsi)
+	movl	712(%rdi), %eax
+	movl	%eax, 1416(%rsi)
+	movl	716(%rdi), %eax
+	movl	%eax, 1420(%rsi)
+	movl	720(%rdi), %eax
+	movl	%eax, 1424(%rsi)
+	movl	724(%rdi), %eax
+	movl	%eax, 1428(%rsi)
+	movl	728(%rdi), %eax
+	movl	%eax, 1432(%rsi)
+	movl	732(%rdi), %eax
+	movl	%eax, 1436(%rsi)
+	movl	736(%rdi), %eax
+	movl	%eax, 1440(%rsi)
+	movl	740(%rdi), %eax
+	movl	%eax, 1444(%rsi)
+	movl	744(%rdi), %eax
+	movl	%eax, 1448(%rsi)
+	movl	748(%rdi), %eax
+	movl	%eax, 1452(%rsi)
+	movl	752(%rdi), %eax
+	movl	%eax, 1456(%rsi)
+	movl	756(%rdi), %eax
+	movl	%eax, 1460(%rsi)
+	movl	760(%rdi), %eax
+	movl	%eax, 1464(%rsi)
+	movl	764(%rdi), %eax
+	movl	%eax, 1468(%rsi)
+	movl	1280(%rdi), %eax
+	movl	%eax, 1472(%rsi)
+	movl	1284(%rdi), %eax
+	movl	%eax, 1476(%rsi)
+	movl	1288(%rdi), %eax
+	movl	%eax, 1480(%rsi)
+	movl	1292(%rdi), %eax
+	movl	%eax, 1484(%rsi)
+	movl	1296(%rdi), %eax
+	movl	%eax, 1488(%rsi)
+	movl	1300(%rdi), %eax
+	movl	%eax, 1492(%rsi)
+	movl	1304(%rdi), %eax
+	movl	%eax, 1496(%rsi)
+	movl	1308(%rdi), %eax
+	movl	%eax, 1500(%rsi)
+	movl	1312(%rdi), %eax
+	movl	%eax, 1504(%rsi)
+	movl	1316(%rdi), %eax
+	movl	%eax, 1508(%rsi)
+	movl	1320(%rdi), %eax
+	movl	%eax, 1512(%rsi)
+	movl	1324(%rdi), %eax
+	movl	%eax, 1516(%rsi)
+	movl	1328(%rdi), %eax
+	movl	%eax, 1520(%rsi)
+	movl	1332(%rdi), %eax
+	movl	%eax, 1524(%rsi)
+	movl	1336(%rdi), %eax
+	movl	%eax, 1528(%rsi)
+	movl	1340(%rdi), %eax
+	movl	%eax, 1532(%rsi)
+	movl	1344(%rdi), %eax
+	movl	%eax, 1536(%rsi)
+	movl	1348(%rdi), %eax
+	movl	%eax, 1540(%rsi)
+	movl	1352(%rdi), %eax
+	movl	%eax, 1544(%rsi)
+	movl	1356(%rdi), %eax
+	movl	%eax, 1548(%rsi)
+	movl	1360(%rdi), %eax
+	movl	%eax, 1552(%rsi)
+	movl	1364(%rdi), %eax
+	movl	%eax, 1556(%rsi)
+	movl	1368(%rdi), %eax
+	movl	%eax, 1560(%rsi)
+	movl	1372(%rdi), %eax
+	movl	%eax, 1564(%rsi)
+	movl	1376(%rdi), %eax
+	movl	%eax, 1568(%rsi)
+	movl	1380(%rdi), %eax
+	movl	%eax, 1572(%rsi)
+	movl	1384(%rdi), %eax
+	movl	%eax, 1576(%rsi)
+	movl	1388(%rdi), %eax
+	movl	%eax, 1580(%rsi)
+	movl	1392(%rdi), %eax
+	movl	%eax, 1584(%rsi)
+	movl	1396(%rdi), %eax
+	movl	%eax, 1588(%rsi)
+	movl	1400(%rdi), %eax
+	movl	%eax, 1592(%rsi)
+	movl	1404(%rdi), %eax
+	movl	%eax, 1596(%rsi)
+	movl	1728(%rdi), %eax
+	movl	%eax, 1600(%rsi)
+	movl	1732(%rdi), %eax
+	movl	%eax, 1604(%rsi)
+	movl	1736(%rdi), %eax
+	movl	%eax, 1608(%rsi)
+	movl	1740(%rdi), %eax
+	movl	%eax, 1616(%rsi)
+	movl	1744(%rdi), %eax
+	movl	%eax, 1620(%rsi)
+	movl	1748(%rdi), %eax
+	movl	%eax, 1624(%rsi)
+	movl	1752(%rdi), %eax
+	movl	%eax, 1632(%rsi)
+	movl	1756(%rdi), %eax
+	movl	%eax, 1636(%rsi)
+	movl	1760(%rdi), %eax
+	movl	%eax, 1640(%rsi)
+	movl	1764(%rdi), %eax
+	movl	%eax, 1648(%rsi)
+	movl	1768(%rdi), %eax
+	movl	%eax, 1652(%rsi)
+	movl	1772(%rdi), %eax
+	movl	%eax, 1656(%rsi)
+	movl	1776(%rdi), %eax
+	movl	%eax, 1664(%rsi)
+	movl	1780(%rdi), %eax
+	movl	%eax, 1668(%rsi)
+	movl	1784(%rdi), %eax
+	movl	%eax, 1672(%rsi)
+	movl	1788(%rdi), %eax
+	movl	%eax, 1680(%rsi)
+	movl	1792(%rdi), %eax
+	movl	%eax, 1684(%rsi)
+	movl	1796(%rdi), %eax
+	movl	%eax, 1688(%rsi)
+	movl	1800(%rdi), %eax
+	movl	%eax, 1696(%rsi)
+	movl	1804(%rdi), %eax
+	movl	%eax, 1700(%rsi)
+	movl	1808(%rdi), %eax
+	movl	%eax, 1704(%rsi)
+	movl	1812(%rdi), %eax
+	movl	%eax, 1712(%rsi)
+	movl	1816(%rdi), %eax
+	movl	%eax, 1716(%rsi)
+	movl	1820(%rdi), %eax
+	movl	%eax, 1720(%rsi)
+	movl	1824(%rdi), %eax
+	movl	%eax, 1728(%rsi)
+	movl	1828(%rdi), %eax
+	movl	%eax, 1732(%rsi)
+	movl	1832(%rdi), %eax
+	movl	%eax, 1736(%rsi)
+	movl	1836(%rdi), %eax
+	movl	%eax, 1744(%rsi)
+	movl	1840(%rdi), %eax
+	movl	%eax, 1748(%rsi)
+	movl	1844(%rdi), %eax
+	movl	%eax, 1752(%rsi)
+	movl	1848(%rdi), %eax
+	movl	%eax, 1760(%rsi)
+	movl	1852(%rdi), %eax
+	movl	%eax, 1764(%rsi)
+	movl	1856(%rdi), %eax
+	movl	%eax, 1768(%rsi)
+	movl	1860(%rdi), %eax
+	movl	%eax, 1776(%rsi)
+	movl	1864(%rdi), %eax
+	movl	%eax, 1780(%rsi)
+	movl	1868(%rdi), %eax
+	movl	%eax, 1784(%rsi)
+	movl	1872(%rdi), %eax
+	movl	%eax, 1792(%rsi)
+	movl	1876(%rdi), %eax
+	movl	%eax, 1796(%rsi)
+	movl	1880(%rdi), %eax
+	movl	%eax, 1800(%rsi)
+	movl	1884(%rdi), %eax
+	movl	%eax, 1808(%rsi)
+	movl	1888(%rdi), %eax
+	movl	%eax, 1812(%rsi)
+	movl	1892(%rdi), %eax
+	movl	%eax, 1816(%rsi)
+	movl	1896(%rdi), %eax
+	movl	%eax, 1824(%rsi)
+	movl	1900(%rdi), %eax
+	movl	%eax, 1828(%rsi)
+	movl	1904(%rdi), %eax
+	movl	%eax, 1832(%rsi)
+	movl	1908(%rdi), %eax
+	movl	%eax, 1840(%rsi)
+	movl	1912(%rdi), %eax
+	movl	%eax, 1844(%rsi)
+	movl	1916(%rdi), %eax
+	movl	%eax, 1848(%rsi)
+	movl	1920(%rdi), %eax
+	movl	%eax, 1856(%rsi)
+	movl	1924(%rdi), %eax
+	movl	%eax, 1860(%rsi)
+	movl	1928(%rdi), %eax
+	movl	%eax, 1864(%rsi)
+	movl	1932(%rdi), %eax
+	movl	%eax, 1872(%rsi)
+	movl	1936(%rdi), %eax
+	movl	%eax, 1876(%rsi)
+	movl	1940(%rdi), %eax
+	movl	%eax, 1880(%rsi)
+	movl	1944(%rdi), %eax
+	movl	%eax, 1888(%rsi)
+	movl	1948(%rdi), %eax
+	movl	%eax, 1892(%rsi)
+	movl	1952(%rdi), %eax
+	movl	%eax, 1896(%rsi)
+	movl	1956(%rdi), %eax
+	movl	%eax, 1904(%rsi)
+	movl	1960(%rdi), %eax
+	movl	%eax, 1908(%rsi)
+	movl	1964(%rdi), %eax
+	movl	%eax, 1912(%rsi)
+	movl	1968(%rdi), %eax
+	movl	%eax, 1920(%rsi)
+	movl	1972(%rdi), %eax
+	movl	%eax, 1924(%rsi)
+	movl	1976(%rdi), %eax
+	movl	%eax, 1928(%rsi)
+	movl	1980(%rdi), %eax
+	movl	%eax, 1936(%rsi)
+	movl	1984(%rdi), %eax
+	movl	%eax, 1940(%rsi)
+	movl	1988(%rdi), %eax
+	movl	%eax, 1944(%rsi)
+	movl	1992(%rdi), %eax
+	movl	%eax, 1952(%rsi)
+	movl	1996(%rdi), %eax
+	movl	%eax, 1956(%rsi)
+	movl	2000(%rdi), %eax
+	movl	%eax, 1960(%rsi)
+	movl	2004(%rdi), %eax
+	movl	%eax, 1968(%rsi)
+	movl	2008(%rdi), %eax
+	movl	%eax, 1972(%rsi)
+	movl	2012(%rdi), %eax
+	movl	%eax, 1976(%rsi)
+	movl	(%rdi), %eax
+	movl	%eax, 1984(%rsi)
+	movl	4(%rdi), %eax
+	movl	%eax, 1988(%rsi)
+	movl	8(%rdi), %eax
+	movl	%eax, 1992(%rsi)
+	movl	12(%rdi), %eax
+	movl	%eax, 1996(%rsi)
+	movl	16(%rdi), %eax
+	movl	%eax, 2000(%rsi)
+	movl	20(%rdi), %eax
+	movl	%eax, 2004(%rsi)
+	movl	24(%rdi), %eax
+	movl	%eax, 2008(%rsi)
+	movl	28(%rdi), %eax
+	movl	%eax, 2012(%rsi)
+	movl	32(%rdi), %eax
+	movl	%eax, 2016(%rsi)
+	movl	36(%rdi), %eax
+	movl	%eax, 2020(%rsi)
+	movl	40(%rdi), %eax
+	movl	%eax, 2024(%rsi)
+	movl	44(%rdi), %eax
+	movl	%eax, 2028(%rsi)
+	movl	48(%rdi), %eax
+	movl	%eax, 2032(%rsi)
+	movl	52(%rdi), %eax
+	movl	%eax, 2036(%rsi)
+	movl	56(%rdi), %eax
+	movl	%eax, 2040(%rsi)
+	movl	60(%rdi), %eax
+	movl	%eax, 2044(%rsi)
+	movl	64(%rdi), %eax
+	movl	%eax, 2048(%rsi)
+	movl	68(%rdi), %eax
+	movl	%eax, 2052(%rsi)
+	movl	72(%rdi), %eax
+	movl	%eax, 2056(%rsi)
+	movl	76(%rdi), %eax
+	movl	%eax, 2060(%rsi)
+	movl	80(%rdi), %eax
+	movl	%eax, 2064(%rsi)
+	movl	84(%rdi), %eax
+	movl	%eax, 2068(%rsi)
+	movl	88(%rdi), %eax
+	movl	%eax, 2072(%rsi)
+	movl	92(%rdi), %eax
+	movl	%eax, 2076(%rsi)
+	movl	96(%rdi), %eax
+	movl	%eax, 2080(%rsi)
+	movl	100(%rdi), %eax
+	movl	%eax, 2084(%rsi)
+	movl	104(%rdi), %eax
+	movl	%eax, 2088(%rsi)
+	movl	108(%rdi), %eax
+	movl	%eax, 2092(%rsi)
+	movl	112(%rdi), %eax
+	movl	%eax, 2096(%rsi)
+	movl	116(%rdi), %eax
+	movl	%eax, 2100(%rsi)
+	movl	120(%rdi), %eax
+	movl	%eax, 2104(%rsi)
+	movl	124(%rdi), %eax
+	movl	%eax, 2108(%rsi)
+	movl	128(%rdi), %eax
+	movl	%eax, 2112(%rsi)
+	movl	132(%rdi), %eax
+	movl	%eax, 2116(%rsi)
+	movl	136(%rdi), %eax
+	movl	%eax, 2120(%rsi)
+	movl	140(%rdi), %eax
+	movl	%eax, 2124(%rsi)
+	movl	144(%rdi), %eax
+	movl	%eax, 2128(%rsi)
+	movl	148(%rdi), %eax
+	movl	%eax, 2132(%rsi)
+	movl	152(%rdi), %eax
+	movl	%eax, 2136(%rsi)
+	movl	156(%rdi), %eax
+	movl	%eax, 2140(%rsi)
+	movl	160(%rdi), %eax
+	movl	%eax, 2144(%rsi)
+	movl	164(%rdi), %eax
+	movl	%eax, 2148(%rsi)
+	movl	168(%rdi), %eax
+	movl	%eax, 2152(%rsi)
+	movl	172(%rdi), %eax
+	movl	%eax, 2156(%rsi)
+	movl	176(%rdi), %eax
+	movl	%eax, 2160(%rsi)
+	movl	180(%rdi), %eax
+	movl	%eax, 2164(%rsi)
+	movl	184(%rdi), %eax
+	movl	%eax, 2168(%rsi)
+	movl	188(%rdi), %eax
+	movl	%eax, 2172(%rsi)
+	movl	192(%rdi), %eax
+	movl	%eax, 2176(%rsi)
+	movl	196(%rdi), %eax
+	movl	%eax, 2180(%rsi)
+	movl	200(%rdi), %eax
+	movl	%eax, 2184(%rsi)
+	movl	204(%rdi), %eax
+	movl	%eax, 2188(%rsi)
+	movl	208(%rdi), %eax
+	movl	%eax, 2192(%rsi)
+	movl	212(%rdi), %eax
+	movl	%eax, 2196(%rsi)
+	movl	216(%rdi), %eax
+	movl	%eax, 2200(%rsi)
+	movl	220(%rdi), %eax
+	movl	%eax, 2204(%rsi)
+	movl	224(%rdi), %eax
+	movl	%eax, 2208(%rsi)
+	movl	228(%rdi), %eax
+	movl	%eax, 2212(%rsi)
+	movl	232(%rdi), %eax
+	movl	%eax, 2216(%rsi)
+	movl	236(%rdi), %eax
+	movl	%eax, 2220(%rsi)
+	movl	240(%rdi), %eax
+	movl	%eax, 2224(%rsi)
+	movl	244(%rdi), %eax
+	movl	%eax, 2228(%rsi)
+	movl	248(%rdi), %eax
+	movl	%eax, 2232(%rsi)
+	movl	252(%rdi), %eax
+	movl	%eax, 2236(%rsi)
+	movl	256(%rdi), %eax
+	movl	%eax, 2240(%rsi)
+	movl	260(%rdi), %eax
+	movl	%eax, 2244(%rsi)
+	movl	264(%rdi), %eax
+	movl	%eax, 2248(%rsi)
+	movl	268(%rdi), %eax
+	movl	%eax, 2252(%rsi)
+	movl	272(%rdi), %eax
+	movl	%eax, 2256(%rsi)
+	movl	276(%rdi), %eax
+	movl	%eax, 2260(%rsi)
+	movl	280(%rdi), %eax
+	movl	%eax, 2264(%rsi)
+	movl	284(%rdi), %eax
+	movl	%eax, 2268(%rsi)
+	movl	288(%rdi), %eax
+	movl	%eax, 2272(%rsi)
+	movl	292(%rdi), %eax
+	movl	%eax, 2276(%rsi)
+	movl	296(%rdi), %eax
+	movl	%eax, 2280(%rsi)
+	movl	300(%rdi), %eax
+	movl	%eax, 2284(%rsi)
+	movl	304(%rdi), %eax
+	movl	%eax, 2288(%rsi)
+	movl	308(%rdi), %eax
+	movl	%eax, 2292(%rsi)
+	movl	312(%rdi), %eax
+	movl	%eax, 2296(%rsi)
+	movl	316(%rdi), %eax
+	movl	%eax, 2300(%rsi)
+	movl	320(%rdi), %eax
+	movl	%eax, 2304(%rsi)
+	movl	324(%rdi), %eax
+	movl	%eax, 2308(%rsi)
+	movl	328(%rdi), %eax
+	movl	%eax, 2312(%rsi)
+	movl	332(%rdi), %eax
+	movl	%eax, 2316(%rsi)
+	movl	336(%rdi), %eax
+	movl	%eax, 2320(%rsi)
+	movl	340(%rdi), %eax
+	movl	%eax, 2324(%rsi)
+	movl	344(%rdi), %eax
+	movl	%eax, 2328(%rsi)
+	movl	348(%rdi), %eax
+	movl	%eax, 2332(%rsi)
+	movl	352(%rdi), %eax
+	movl	%eax, 2336(%rsi)
+	movl	356(%rdi), %eax
+	movl	%eax, 2340(%rsi)
+	movl	360(%rdi), %eax
+	movl	%eax, 2344(%rsi)
+	movl	364(%rdi), %eax
+	movl	%eax, 2348(%rsi)
+	movl	368(%rdi), %eax
+	movl	%eax, 2352(%rsi)
+	movl	372(%rdi), %eax
+	movl	%eax, 2356(%rsi)
+	movl	376(%rdi), %eax
+	movl	%eax, 2360(%rsi)
+	movl	380(%rdi), %eax
+	movl	%eax, 2364(%rsi)
+	movl	384(%rdi), %eax
+	movl	%eax, 2368(%rsi)
+	movl	388(%rdi), %eax
+	movl	%eax, 2372(%rsi)
+	movl	392(%rdi), %eax
+	movl	%eax, 2376(%rsi)
+	movl	396(%rdi), %eax
+	movl	%eax, 2380(%rsi)
+	movl	400(%rdi), %eax
+	movl	%eax, 2384(%rsi)
+	movl	404(%rdi), %eax
+	movl	%eax, 2388(%rsi)
+	movl	408(%rdi), %eax
+	movl	%eax, 2392(%rsi)
+	movl	412(%rdi), %eax
+	movl	%eax, 2396(%rsi)
+	movl	416(%rdi), %eax
+	movl	%eax, 2400(%rsi)
+	movl	420(%rdi), %eax
+	movl	%eax, 2404(%rsi)
+	movl	424(%rdi), %eax
+	movl	%eax, 2408(%rsi)
+	movl	428(%rdi), %eax
+	movl	%eax, 2412(%rsi)
+	movl	432(%rdi), %eax
+	movl	%eax, 2416(%rsi)
+	movl	436(%rdi), %eax
+	movl	%eax, 2420(%rsi)
+	movl	440(%rdi), %eax
+	movl	%eax, 2424(%rsi)
+	movl	444(%rdi), %eax
+	movl	%eax, 2428(%rsi)
+	movl	448(%rdi), %eax
+	movl	%eax, 2432(%rsi)
+	movl	452(%rdi), %eax
+	movl	%eax, 2436(%rsi)
+	movl	456(%rdi), %eax
+	movl	%eax, 2440(%rsi)
+	movl	460(%rdi), %eax
+	movl	%eax, 2444(%rsi)
+	movl	464(%rdi), %eax
+	movl	%eax, 2448(%rsi)
+	movl	468(%rdi), %eax
+	movl	%eax, 2452(%rsi)
+	movl	472(%rdi), %eax
+	movl	%eax, 2456(%rsi)
+	movl	476(%rdi), %eax
+	movl	%eax, 2460(%rsi)
+	movl	480(%rdi), %eax
+	movl	%eax, 2464(%rsi)
+	movl	484(%rdi), %eax
+	movl	%eax, 2468(%rsi)
+	movl	488(%rdi), %eax
+	movl	%eax, 2472(%rsi)
+	movl	492(%rdi), %eax
+	movl	%eax, 2476(%rsi)
+	movl	496(%rdi), %eax
+	movl	%eax, 2480(%rsi)
+	movl	500(%rdi), %eax
+	movl	%eax, 2484(%rsi)
+	movl	504(%rdi), %eax
+	movl	%eax, 2488(%rsi)
+	movl	508(%rdi), %eax
+	movl	%eax, 2492(%rsi)
+	movl	2276(%rdi), %eax
+	movl	%eax, 2496(%rsi)
+.LBB0_2:
 	retq
-.LBB2_161:
-	.cfi_def_cfa_offset 64
-	addq	$4, %rdi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_154:
-	leaq	4(%rax), %rsi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	movq	%rax, %rdi
-	callq	*core::slice::index::slice_index_order_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_155:
-	addq	$4, %rax
-.LBB2_156:
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	movq	%rax, %rdi
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_157:
-	leaq	4(%rdi), %rcx
-	movq	%rdi, %rax
-	jmp	.LBB2_173
-.LBB2_158:
-	addq	$8, %rdi
-	jmp	.LBB2_172
-.LBB2_159:
-	addq	$8, %rcx
-	jmp	.LBB2_184
-.LBB2_167:
-	addq	$8, %rdi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_168:
-	addq	$12, %rdi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_163:
-	addq	$4, %rcx
-	jmp	.LBB2_184
-.LBB2_160:
-	leaq	4(%rdi), %rsi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	callq	*core::slice::index::slice_index_order_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_162:
-	movq	%rcx, %rdi
-	addq	$4, %rcx
-	jmp	.LBB2_165
-.LBB2_164:
-	addq	$8, %rcx
-.LBB2_165:
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	movq	%rcx, %rsi
-	callq	*core::slice::index::slice_index_order_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_171:
-	addq	$12, %rdi
-.LBB2_172:
-	movq	%rdi, %rcx
-.LBB2_173:
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	movq	%rax, %rdi
-	movq	%rcx, %rsi
-	callq	*core::slice::index::slice_index_order_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_175:
-	addq	$16, %rdi
-.LBB2_176:
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_177:
-	leaq	4(%rcx), %rax
-	movq	%rcx, %rdi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	movq	%rax, %rsi
-	callq	*core::slice::index::slice_index_order_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_179:
-	addq	$8, %rcx
-	movq	%rcx, %rax
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	movq	%rax, %rsi
-	callq	*core::slice::index::slice_index_order_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_180:
-	addq	$12, %rcx
-	movq	%rcx, %rax
-.LBB2_181:
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	movq	%rax, %rsi
-	callq	*core::slice::index::slice_index_order_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_182:
-	addq	$12, %rcx
-	jmp	.LBB2_184
-.LBB2_183:
-	addq	$16, %rcx
-.LBB2_184:
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	movq	%rcx, %rdi
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_185:
-	movq	%rdi, %r8
-	movq	%rax, %rcx
-	jmp	.LBB2_188
-.LBB2_247:
-	movq	%rax, %rdi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_186:
-	movq	%rax, %r8
-.LBB2_187:
-	movq	%rdi, %rcx
-.LBB2_188:
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	movq	%r8, %rdi
-	movq	%rcx, %rsi
-	callq	*core::slice::index::slice_index_order_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_189:
-	movq	%rax, %rcx
-	movq	%rdi, %rax
-	jmp	.LBB2_238
-.LBB2_190:
-	movq	%rdi, %rax
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	movq	%rax, %rdi
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_237:
-	movq	%rdi, %rcx
-	jmp	.LBB2_238
-.LBB2_191:
-	movq	%rax, %rdi
-	movq	%r8, %rax
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	movq	%rax, %rsi
-	callq	*core::slice::index::slice_index_order_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_239:
-	movq	%r8, %rax
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	movq	%rax, %rdi
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_232:
-	movq	%rsi, %rcx
-.LBB2_238:
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	movq	%rcx, %rdi
-	movq	%rax, %rsi
-	callq	*core::slice::index::slice_index_order_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_240:
-	movq	%r8, %rdi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	movq	%rax, %rsi
-	callq	*core::slice::index::slice_index_order_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_192:
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	movl	$8, %edi
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_193:
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	movl	$12, %edi
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_194:
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	movl	$16, %edi
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_195:
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	movl	$20, %edi
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_196:
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	movl	$24, %edi
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_197:
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	movl	$28, %edi
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_198:
-	movl	$36, %edi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_199:
-	movl	$40, %edi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_200:
-	movl	$52, %edi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_201:
-	movl	$56, %edi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_202:
-	movl	$60, %edi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_203:
-	movl	$68, %edi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_204:
-	movl	$72, %edi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_205:
-	movl	$76, %edi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_206:
-	movl	$80, %edi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_207:
-	movl	$84, %edi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_208:
-	movl	$88, %edi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_209:
-	movl	$92, %edi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_210:
-	movl	$96, %edi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_211:
-	movl	$100, %edi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_212:
-	movl	$104, %edi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_213:
-	movl	$108, %edi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_214:
-	movl	$112, %edi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_215:
-	movl	$116, %edi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_216:
-	movl	$120, %edi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_217:
-	movl	$124, %edi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_218:
-	movl	$128, %edi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_219:
-	movl	$132, %edi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_220:
-	movl	$136, %edi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_221:
-	movl	$140, %edi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_222:
-	movl	$144, %edi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_223:
-	movl	$148, %edi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_224:
-	movl	$152, %edi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_225:
-	movl	$164, %edi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_226:
-	movl	$168, %edi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_227:
-	movl	$172, %edi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_228:
-	movl	$180, %edi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_229:
-	movl	$184, %edi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_230:
-	movl	$188, %edi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.LBB2_252:
-	movq	%rdi, %r8
-	jmp	.LBB2_188
-.LBB2_253:
-	movq	%rcx, %rdi
-	leaq	.Lanon.ca66916de8363dd505c87a5debb16328.1(%rip), %rdx
-	callq	*core::slice::index::slice_end_index_len_fail@GOTPCREL(%rip)
-	ud2
-.Lfunc_end2:
-	.size	storage_buffer_write_into_slice, .Lfunc_end2-storage_buffer_write_into_slice
+.Lfunc_end0:
+	.size	storage_buffer_write_into_slice, .Lfunc_end0-storage_buffer_write_into_slice
 	.cfi_endproc
 
 	.section	".text.<storage_buffer_write_into_slice::A as encase::core::traits::ShaderType>::size","ax",@progbits
@@ -1532,22 +1162,8 @@ storage_buffer_write_into_slice:
 	.cfi_startproc
 	movl	$2512, %eax
 	retq
-.Lfunc_end3:
-	.size	<storage_buffer_write_into_slice::A as encase::core::traits::ShaderType>::size, .Lfunc_end3-<storage_buffer_write_into_slice::A as encase::core::traits::ShaderType>::size
+.Lfunc_end1:
+	.size	<storage_buffer_write_into_slice::A as encase::core::traits::ShaderType>::size, .Lfunc_end1-<storage_buffer_write_into_slice::A as encase::core::traits::ShaderType>::size
 	.cfi_endproc
-
-	.type	.Lanon.ca66916de8363dd505c87a5debb16328.0,@object
-	.section	.rodata..Lanon.ca66916de8363dd505c87a5debb16328.0,"a",@progbits
-.Lanon.ca66916de8363dd505c87a5debb16328.0:
-	.ascii	"/home/james/.cargo/git/checkouts/encase-7716fa7dbfd7bb15/02f36c5/src/utils.rs"
-	.size	.Lanon.ca66916de8363dd505c87a5debb16328.0, 77
-
-	.type	.Lanon.ca66916de8363dd505c87a5debb16328.1,@object
-	.section	.data.rel.ro..Lanon.ca66916de8363dd505c87a5debb16328.1,"aw",@progbits
-	.p2align	3, 0x0
-.Lanon.ca66916de8363dd505c87a5debb16328.1:
-	.quad	.Lanon.ca66916de8363dd505c87a5debb16328.0
-	.asciz	"M\000\000\000\000\000\000\000\201\000\000\000\030\000\000"
-	.size	.Lanon.ca66916de8363dd505c87a5debb16328.1, 24
 
 	.section	".note.GNU-stack","",@progbits
