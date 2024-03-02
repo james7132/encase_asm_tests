@@ -1,5 +1,5 @@
 	.text
-	.file	"uniform_buffer_write_into_slice.5bee51f2602d2861-cgu.0"
+	.file	"uniform_buffer_write_into_slice.b24996e14bae30c0-cgu.0"
 	.section	.text.uniform_buffer_write_into_vec,"ax",@progbits
 	.globl	uniform_buffer_write_into_vec
 	.p2align	4, 0x90
@@ -18,7 +18,7 @@ uniform_buffer_write_into_vec:
 	.cfi_offset %r14, -24
 	.cfi_offset %r15, -16
 	movb	$0, 11(%rsp)
-	leaq	.Lanon.4aff1337686c6d7b73993e227a1de527.0(%rip), %rax
+	leaq	.Lanon.c777af8b5dd06e49ed31cee4cc0271bc.0(%rip), %rax
 	movq	%rax, 12(%rsp)
 	movq	$35, 20(%rsp)
 	movw	$1, 28(%rsp)
@@ -31,7 +31,7 @@ uniform_buffer_write_into_vec:
 	xorl	%edx, %edx
 	callq	*%r15
 	movb	$0, 34(%rsp)
-	leaq	.Lanon.4aff1337686c6d7b73993e227a1de527.1(%rip), %rax
+	leaq	.Lanon.c777af8b5dd06e49ed31cee4cc0271bc.1(%rip), %rax
 	movq	%rax, 35(%rsp)
 	movq	$18, 43(%rsp)
 	movw	$1, 51(%rsp)
@@ -43,7 +43,7 @@ uniform_buffer_write_into_vec:
 	xorl	%edx, %edx
 	callq	*%r15
 	movb	$0, 57(%rsp)
-	leaq	.Lanon.4aff1337686c6d7b73993e227a1de527.2(%rip), %rax
+	leaq	.Lanon.c777af8b5dd06e49ed31cee4cc0271bc.2(%rip), %rax
 	movq	%rax, 58(%rsp)
 	movq	$1, 66(%rsp)
 	movw	$1, 74(%rsp)
@@ -61,7 +61,7 @@ uniform_buffer_write_into_vec:
 	leaq	57(%rsp), %rax
 	movq	%rax, 160(%rsp)
 	movq	$1, 168(%rsp)
-	leaq	.Lanon.4aff1337686c6d7b73993e227a1de527.4(%rip), %rdx
+	leaq	.Lanon.c777af8b5dd06e49ed31cee4cc0271bc.4(%rip), %rdx
 	leaq	96(%rsp), %rdi
 	movl	$5, %esi
 	callq	*const_panic::concat_panic_::concat_panic@GOTPCREL(%rip)
@@ -81,37 +81,37 @@ uniform_buffer_write_into_vec:
 	.size	<uniform_buffer_write_into_slice::A as encase::core::traits::ShaderType>::size, .Lfunc_end1-<uniform_buffer_write_into_slice::A as encase::core::traits::ShaderType>::size
 	.cfi_endproc
 
-	.type	.Lanon.4aff1337686c6d7b73993e227a1de527.0,@object
-	.section	.rodata..Lanon.4aff1337686c6d7b73993e227a1de527.0,"a",@progbits
-.Lanon.4aff1337686c6d7b73993e227a1de527.0:
+	.type	.Lanon.c777af8b5dd06e49ed31cee4cc0271bc.0,@object
+	.section	.rodata..Lanon.c777af8b5dd06e49ed31cee4cc0271bc.0,"a",@progbits
+.Lanon.c777af8b5dd06e49ed31cee4cc0271bc.0:
 	.ascii	"array stride must be a multiple of "
-	.size	.Lanon.4aff1337686c6d7b73993e227a1de527.0, 35
+	.size	.Lanon.c777af8b5dd06e49ed31cee4cc0271bc.0, 35
 
-	.type	.Lanon.4aff1337686c6d7b73993e227a1de527.1,@object
-	.section	.rodata..Lanon.4aff1337686c6d7b73993e227a1de527.1,"a",@progbits
-.Lanon.4aff1337686c6d7b73993e227a1de527.1:
+	.type	.Lanon.c777af8b5dd06e49ed31cee4cc0271bc.1,@object
+	.section	.rodata..Lanon.c777af8b5dd06e49ed31cee4cc0271bc.1,"a",@progbits
+.Lanon.c777af8b5dd06e49ed31cee4cc0271bc.1:
 	.ascii	" (current stride: "
-	.size	.Lanon.4aff1337686c6d7b73993e227a1de527.1, 18
+	.size	.Lanon.c777af8b5dd06e49ed31cee4cc0271bc.1, 18
 
-	.type	.Lanon.4aff1337686c6d7b73993e227a1de527.2,@object
-	.section	.rodata..Lanon.4aff1337686c6d7b73993e227a1de527.2,"a",@progbits
-.Lanon.4aff1337686c6d7b73993e227a1de527.2:
+	.type	.Lanon.c777af8b5dd06e49ed31cee4cc0271bc.2,@object
+	.section	.rodata..Lanon.c777af8b5dd06e49ed31cee4cc0271bc.2,"a",@progbits
+.Lanon.c777af8b5dd06e49ed31cee4cc0271bc.2:
 	.byte	41
-	.size	.Lanon.4aff1337686c6d7b73993e227a1de527.2, 1
+	.size	.Lanon.c777af8b5dd06e49ed31cee4cc0271bc.2, 1
 
-	.type	.Lanon.4aff1337686c6d7b73993e227a1de527.3,@object
-	.section	.rodata..Lanon.4aff1337686c6d7b73993e227a1de527.3,"a",@progbits
-.Lanon.4aff1337686c6d7b73993e227a1de527.3:
-	.ascii	"/home/james/.cargo/registry/src/index.crates.io-6f17d22bba15001f/encase-0.7.0/src/types/array.rs"
-	.size	.Lanon.4aff1337686c6d7b73993e227a1de527.3, 96
+	.type	.Lanon.c777af8b5dd06e49ed31cee4cc0271bc.3,@object
+	.section	.rodata..Lanon.c777af8b5dd06e49ed31cee4cc0271bc.3,"a",@progbits
+.Lanon.c777af8b5dd06e49ed31cee4cc0271bc.3:
+	.ascii	"/home/james/.cargo/git/checkouts/encase-7716fa7dbfd7bb15/35c9b7c/src/types/array.rs"
+	.size	.Lanon.c777af8b5dd06e49ed31cee4cc0271bc.3, 83
 
-	.type	.Lanon.4aff1337686c6d7b73993e227a1de527.4,@object
-	.section	.data.rel.ro..Lanon.4aff1337686c6d7b73993e227a1de527.4,"aw",@progbits
+	.type	.Lanon.c777af8b5dd06e49ed31cee4cc0271bc.4,@object
+	.section	.data.rel.ro..Lanon.c777af8b5dd06e49ed31cee4cc0271bc.4,"aw",@progbits
 	.p2align	3, 0x0
-.Lanon.4aff1337686c6d7b73993e227a1de527.4:
-	.quad	.Lanon.4aff1337686c6d7b73993e227a1de527.3
-	.asciz	"`\000\000\000\000\000\000\000/\000\000\000\021\000\000"
-	.size	.Lanon.4aff1337686c6d7b73993e227a1de527.4, 24
+.Lanon.c777af8b5dd06e49ed31cee4cc0271bc.4:
+	.quad	.Lanon.c777af8b5dd06e49ed31cee4cc0271bc.3
+	.asciz	"S\000\000\000\000\000\000\0000\000\000\000\021\000\000"
+	.size	.Lanon.c777af8b5dd06e49ed31cee4cc0271bc.4, 24
 
 	.ident	"rustc version 1.76.0 (07dca489a 2024-02-04)"
 	.section	".note.GNU-stack","",@progbits
