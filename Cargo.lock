@@ -11,7 +11,7 @@ checksum = "6051f239ecec86fde3410901ab7860d458d160371533842974fc61f96d15879b"
 [[package]]
 name = "encase"
 version = "0.7.0"
-source = "git+https://github.com/james7132/encase?branch=direct-copy-specialization#1c4b8b755849b736baedabad44164fc56e1d5f25"
+source = "git+https://github.com/james7132/encase?branch=direct-copy-specialization#06af983cb7985905ff3c960af9a43ed4e0ff79ad"
 dependencies = [
  "const_panic",
  "encase_derive",
@@ -30,7 +30,7 @@ dependencies = [
 [[package]]
 name = "encase_derive"
 version = "0.7.0"
-source = "git+https://github.com/james7132/encase?branch=direct-copy-specialization#1c4b8b755849b736baedabad44164fc56e1d5f25"
+source = "git+https://github.com/james7132/encase?branch=direct-copy-specialization#06af983cb7985905ff3c960af9a43ed4e0ff79ad"
 dependencies = [
  "encase_derive_impl",
 ]
@@ -38,7 +38,7 @@ dependencies = [
 [[package]]
 name = "encase_derive_impl"
 version = "0.7.0"
-source = "git+https://github.com/james7132/encase?branch=direct-copy-specialization#1c4b8b755849b736baedabad44164fc56e1d5f25"
+source = "git+https://github.com/james7132/encase?branch=direct-copy-specialization#06af983cb7985905ff3c960af9a43ed4e0ff79ad"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -71,9 +71,9 @@ dependencies = [
 
 [[package]]
 name = "syn"
-version = "2.0.53"
+version = "2.0.55"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7383cd0e49fff4b6b90ca5670bfd3e9d6a733b3f90c686605aa7eec8c4996032"
+checksum = "002a1b3dbf967edfafc32655d0f377ab0bb7b994aa1d32c8cc7e9b8bf3ebb8f0"
 dependencies = [
  "proc-macro2",
  "quote",
